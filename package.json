@@ -2,8 +2,7 @@
   "homepage": "https://github.com/belferink1996/SVCollege-notebook",
   "name": "svcollege",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "deploy": "gh-pages -d ."
   },
