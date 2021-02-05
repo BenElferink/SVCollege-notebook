@@ -1,0 +1,28 @@
+* {
+  text-align: center;
+}
+body {
+  background-color: rgb(115, 85, 170);
+}
+
+.line {
+  width: 100%;
+  border: 1px solid black;
+}
+.subline {
+  width: 50%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+header a {
+  color: white;
+}
+div {
+  border: 1px solid black;
+  background-color: white;
+}
+.neutral {
+  border: none;
+  background-color: transparent;
+}

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("./../media/background.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-content: unset;
+  text-align: center;
+}
+
+.app button {
+  padding: 2px 5px;
+  background-color: #c7ebd9;
+  border: 0.5px solid #202a25;
+  border-radius: 1rem;
+  color: #202a25;
+  cursor: pointer;
+}
+
+.app button:hover, .app button:active {
+  text-decoration: underline;
+}
+
+.app .users {
+  color: #202a25;
+  text-shadow: 1px 1px 1px #c7ebd9;
+}
+
+.app .users h1 {
+  margin: 1rem 0;
+}
+
+.app .users table {
+  margin-top: 42px;
+  border-collapse: collapse;
+}
+
+.app .users table .border {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #202a25;
+  border-left: 1px solid #202a25;
+}
+
+.app .users table .uname {
+  width: 120px;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.app .users table .uname:hover, .app .users table .uname:active {
+  color: #c7ebd9;
+  text-shadow: 0 0 1px #202a25;
+}
+
+.app .users table .inp-group {
+  padding: 14px 0;
+}
+
+.app .users table .inp-group input {
+  margin-right: 5px;
+  padding: 2px 5px;
+  border: 0.5px solid #202a25;
+  border-radius: 1rem;
+}
+
+.app .game {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #c7ebd9;
+  text-shadow: 1px 1px 1px #202a25;
+  font-size: 24px;
+}
+
+.app .game .card {
+  width: 150px;
+  height: 210px;
+  background: url("./../media//card.png") no-repeat center;
+  background-size: cover;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.app .game .card span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(32, 42, 37, 0.555);
+  border-radius: 10px;
+}
+
+.app .game button {
+  padding: 3px 7px;
+  font-size: 16px;
+}
+
+.app .game .remaining {
+  font-size: 14px;
+}
+
+.app .result {
+  color: #202a25;
+  text-shadow: 1px 1px 1px #c7ebd9;
+}
+
+.app .result p {
+  margin: 3rem 0;
+  font-size: 42px;
+}
+
+.app .result button {
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Register {
+  min-width: 60vmin;
+  background-color: white;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 1vmin;
+  padding: 2rem;
+}
+
+.inp-group {
+  position: relative;
+}
+
+.inp {
+  width: 100%;
+  border: none;
+  margin: 1rem 0;
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  outline: none;
+}
+
+.inp-group label {
+  padding-left: 1rem;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  user-select: none;
+  transition: all 0.3s;
+  cursor: text;
+}
+
+.inp:focus ~ label {
+  top: 0;
+  font-size: 0.7rem;
+}
+
+::placeholder {
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.inp:focus::placeholder {
+  opacity: 1;
+}
+
+.inp-line {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 68%;
+  left: 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 5vmin;
+  border: none;
+  background-color: rgb(0, 120, 190);
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(0, 150, 240);
+}
+
+.btn:active {
+  cursor: pointer;
+  background-color: rgb(0, 150, 240);
+}

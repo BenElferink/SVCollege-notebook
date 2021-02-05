@@ -1,0 +1,61 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.x {
+  border: 3px dashed red;
+}
+
+ol {
+  list-style-type: lower-greek;
+}
+
+ul {
+  list-style-type: square;
+}
+
+img {
+  width: 70px;
+}
+
+div {
+  border: 1px solid black;
+  margin-left: 40px;
+}
+
+/* navigation menu */
+.navul {
+  list-style-type: none;
+}
+.listil {
+  display: inline-block;
+  width: 75px;
+}
+a {
+  text-decoration: none;
+}
+/* before clicking */
+a:link {
+  color: red;
+}
+/* while hovering */
+a:hover {
+  text-decoration: underline;
+  letter-spacing: 3px;
+  transition: 1s;
+}
+/* while clicking */
+a:active {
+  color: orange;
+}
+/* clicked link */
+a:visited {
+  color: green;
+}

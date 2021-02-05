@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Questions: part-01
+        </h1>
+    </header>
+    <main>
+        <section>
+            <div class="question" dir="rtl">
+                1. כתוב תכנית שאר מוצאת את מיקום התווים b ו- e במחרוזת 'abcdefgh'<br />
+                התוצאות יודפסו בקונסול.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q1
+                        let strQ1 = 'abcdefgh';
+                        let indexOfE = strQ1.indexOf('e');
+                        let indexOfB = strQ1.indexOf('b');
+                        console.log(`Q1;  ${indexOfE}, ${indexOfB}`);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                2. צור את המחרוזת הבאה: I really like fruits and vegetables<br />
+                צור משתנה נוסף אשר יכיל מתוך המחרוזת את המילה fruits.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q2
+                        let strQ2 = 'I really like fruits and vegetables';
+                        let indexOfFruits = strQ2.indexOf('fruits');
+                        let strFruits = strQ2.substring(indexOfFruits, indexOfFruits+6);
+                        console.log(`Q2;  ${strFruits}`);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                3. צור 3 משתנים : שם פרטי, שם משפחה, גיל<br />
+                התוכנית תדפיס: "שמי הוא xxx yyy הגיל שלי הוא zzz"<br />
+                (הדפסה לקונסול בes6)
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q3
+                        let firstName = 'Ben';
+                        let lastName = 'Elferink';
+                        let age = 23;
+                        console.log(`Q3;  My name is ${firstName} ${lastName}, I am ${age} years old`);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                4. צור 2 משתנים המכילים מחרוזות, התוכנית תדפיס את תוכן המשתנים בalert.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q4
+                        let strOneQ4 = 'Variable#1';
+                        let strTwoQ4 = 'Variable#2';
+                        window.alert(`Q4;  String1 contains: ${strOneQ4}, String2 contains: ${strTwoQ4}`);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                5. צור משתנה המכיל מחרוזת עם אותיות קטנות, התכנית תדפיס לקונסול את המחרוזת באותיות גדולות<br />
+                (לא נלמד בכיתה).
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q5
+                        let strQ5 = 'capitalize this';
+                        strQ5 = strQ5.toUpperCase();
+                        console.log(`Q5;  ${strQ5}`);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                6. כתוב פעולה שתקבל מחרוזת ותחזיר מחרוזת חדשה בה החצי הראשון של המחרוזת המקורית מופיע בסוף, והחצי השני של המחרוזת המקורית יופיע בהתחלה.<br />
+                "defabc" תוחזר המחרוזת "abcdef", ניתן להניח כי גודל המחרוזת זוגי.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q6-str" placeholder="String">
+                    <button onclick="split(document.getElementById('q6-str').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q6
+                        function split(str){
+                            let strHalf = parseInt(str.length/2);
+                            let strNew = str.slice(strHalf) + str.slice(0, strHalf);
+                            window.alert(`Q6;  before: ${str}, after: ${strNew}`);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

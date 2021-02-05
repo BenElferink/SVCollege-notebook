@@ -1,0 +1,23 @@
+*{
+    font-family: Arial;
+}
+section{
+    display: grid;
+    place-items: center;
+}
+h1{
+    text-align: center;
+}
+button{
+    height: 40px;
+    width: 100px;
+    background-color: #00ffdd;
+    border-radius: 15%;
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+button:hover{
+    background-color: #00ccff;
+    transform: scale(1.05);
+    cursor: pointer;
+}

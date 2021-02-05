@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Questions: part-03
+        </h1>
+    </header>
+    <main>
+        <section>
+            <div class="question" dir="rtl">
+                1. כתבו תוכנית הבודקת את כל המספרים מ100 עד 999 (תלת ספרתיים) ומדפיסה את המספרים שספרת האחדות שלהם שווה לספרת העשרות.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <button onclick="funcQ1()">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q1
+                        function funcQ1(){
+                            console.log('Answer to Q1');
+                            for(let i=100; i < 1000; i++){
+                                let units = i%10;
+                                let tens = parseInt(i/10)%10;
+                                if(units == tens){
+                                    console.log(i);
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                2. **כתבו תוכנית המדפיסה את כל המספרים הדו ספרתיים האי זוגיים המתחלקים ב- 3 ללא שארית מהסוף להתחלה (מהמספר 99 ועד המספר 10).
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <button onclick="funcQ2()">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q2
+                        function funcQ2(){
+                            console.log('Answer to Q2');
+                            for(let i=99; i > 9; i--){
+                                if(i%2 != 0){
+                                    if(i%3 == 0){
+                                        console.log(i);
+                                    }
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                3. **כתבו תוכנית המדפיסה את כל המספרים הדו ספרתיים הזוגיים שספרת האחדות היא חצי מספרת העשרות.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <button onclick="funcQ3()">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q3
+                        function funcQ3(){
+                            console.log('Answer to Q3');
+                            for(let i=10; i < 100; i++){
+                                if(i%2 == 0){
+                                    let units = i%10;
+                                    let tens = parseInt(i/10);
+                                    if((tens/2) == units){
+                                        console.log(i);
+                                    }
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                4. קלוט מחרוזת והדפס כמה מבין האותיות הקטנות מהאלפאבית הלועזי מופיעות בה (ללא כפילויות)<br />
+                לדוגמא: עבור המחרוזת "?balloon blue "יודפס 7.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q4" placeholder="place text">
+                    <button onclick="funcQ4(document.getElementById('q4').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q4
+                        function funcQ4(str){
+                            console.log('Answer to Q4');
+                            let counter = 0;
+                            let usedLetters = [];
+                            for(let i=0; i < str.length; i++){
+                                if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z'){
+                                    counter++;
+                                    for(let j=0; j < usedLetters.length; j++){
+                                        if(str.charAt(i) == usedLetters[j]){
+                                            counter--;
+                                            j=usedLetters.length
+                                        }
+                                    }
+                                    usedLetters.push(str.charAt(i));
+                                }
+                            }
+                            console.log(counter);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                ***אתגר***<br />
+                5. כתוב פונקציה המקבלת מחרוזת  str, מספר שלם ,place ותת מחרוזת sub הפונקציה מחזירה מחרוזת שבה "נשתלת" תת המחרוזת sub בתוך המחרוזת str  החל מהמקום ה place.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q5str" placeholder="place text">
+                    <input type="text" id="q5sub" placeholder="place subtext">
+                    <input type="number" id="q5place" placeholder="place number">
+                    <button onclick="funcQ5(document.getElementById('q5str').value, document.getElementById('q5sub').value, document.getElementById('q5place').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q5
+                        function funcQ5(str, sub, place){
+                            console.log('Answer to Q5');
+                            if(place < str.length){
+                                let newStr = str.slice(0,place) + sub + str.slice(place);
+                                console.log(newStr);
+                            } else{
+                                console.log(`${place} must be smaller than ${str}'s length`);
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                ***אתגר***<br />
+                6. כתוב קטע תכנית הקולט מחרוזת ומדפיס כמה אותיות ניקוד יש בה (u, o, i, e, a)
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q6" placeholder="place text">
+                    <button onclick="funcQ6(document.getElementById('q6').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        // Answer to Q6
+                        function funcQ6(str){
+                            console.log('Answer to Q6');
+                            let counter=0;
+                            let vowels = ['a', 'e', 'i', 'o', 'u'];
+                            for(let i=0; i < str.length; i++){
+                                for(let j=0; j < 5; j++){
+                                    if(str.charAt(i) == vowels[j]){
+                                        counter++;
+                                    }
+                                }
+                            }
+                            console.log(counter);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

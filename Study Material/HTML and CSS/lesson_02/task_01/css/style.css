@@ -1,0 +1,23 @@
+h1 {
+  color: darkorange;
+  background-color: darkslategrey;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+img {
+  width: 50px;
+}
+
+body {
+  background-color: darkkhaki;
+  transition: 0.5s;
+}
+body:hover {
+  background-color: darkturquoise;
+}

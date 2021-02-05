@@ -1,0 +1,54 @@
+h1{
+    font-family: Arial;
+    text-align: center;
+}
+main{
+    display: grid;
+    place-items: center;
+}
+table, th, td{
+    border-collapse: collapse;
+}
+table{
+    background-color: rgb(180, 180, 175);
+    border-radius: 5%;
+}
+table button{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 100%;
+    font-size: 15px;
+    color: rgb(25, 20, 55);
+    transition: all 0.1s;
+}
+table button:active{
+    transform: scale(1.2) !important;
+}
+table input{
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgb(150, 155, 50);
+}
+.numpad{
+    border: 1px solid rgb(200, 120, 160);
+    background-color: rgb(170, 70, 110);
+}
+.numpad:hover{
+    background-color: rgb(150, 50, 100);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.operator{
+    border: 1px solid rgb(180, 170, 160);
+    background-color: rgb(150, 140, 135);
+}
+.operator:hover{
+    background-color: rgb(130, 120, 125);
+    transform: scale(1.05);
+    cursor: pointer;
+}

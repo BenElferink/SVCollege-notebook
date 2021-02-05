@@ -1,0 +1,31 @@
+.App {
+  background: url(./cyberWall.jpeg) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App header {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.App header div h1 {
+  font-size: 15vmin;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 1vmin black;
+}
+
+.App header div h2 {
+  font-size: 10vmin;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 1vmin black;
+}

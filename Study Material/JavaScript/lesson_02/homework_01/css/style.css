@@ -1,0 +1,35 @@
+body{
+    background-color: #e7e7e7;
+    font-family: Arial;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    margin: 10px;
+}
+h1{
+    display: grid;
+    place-items: center;
+}
+/*  */
+section{
+    border: 1px solid #000000;
+    margin: 0 100px;
+}
+.question{
+    margin: 20px 5px;
+    display: grid;
+    place-items: center;
+}
+.flex{
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.interact{
+    display: grid;
+}

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background-color: #e7e7e7;
+}
+section{
+    border: 1px solid #000000;
+    margin: 0 100px;
+}
+.question, h1{
+    margin: 20px 5px;
+    display: grid;
+    place-items: center;
+}
+.flex{
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.interact{
+    display: flex;
+    flex-direction: column;
+}

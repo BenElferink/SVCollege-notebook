@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>homework: js-lesson2</h1>
+    </header>
+    <main>
+      <!--  -->
+      <!--  -->
+      <section>
+        <div class="question" dir="rtl">
+          1. יש לייצר 3 משתנים עם ערכים מספריים בתוכם. התוכנית תדפיס את המכפלה של שלושתם.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q1
+                        let oneA = 7;
+                        let oneB = 4;
+                        let oneC = 3;
+                        console.log(oneA * oneB * oneC);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          2. יש ליצור 2 משתנים עם מחרוזות. יש להחליף את הערכים בין ה - משתנים בעזרת משתנה עזר נוסף.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q2
+                        let twoA = 'Alpha';
+                        let twoB = 'Beta';
+                        console.log(twoA, twoB);
+                        let twoC = twoA;
+                        twoA = twoB;
+                        twoB = twoC;
+                        console.log(twoA, twoB);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          3. יש ליצור משתנה אשר מחזיק בשם המלא שלכם (שם פרטי ושם משפחה עם רווח אחד בלבד).<br />
+          התוכנית תחליף את הרווח בכוכבית.<br />
+          לדוגמא: shem bar &#8594; shem*bar
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q3
+                        let threeA = 'Ben Elferink';
+                        let threeB = threeA.replace(' ', '*');
+                        console.log(threeB);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          4. יש ליצור 2 משתנים ולהדפיס את החזקה של אחד בשני.<br />
+          לדוגמא: 5 , 2 &radic; 25
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q4
+                        let fourA = 3;
+                        let fourB = 5;
+                        console.log( Math.pow(fourA, fourB) );
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          5. יש ליצור 2 משתנים, משתנה אחד בעל אות אחת והמשתנה השני גדול מ 5 תווים. יש להכניס את
+          המשתנה הראשון ב 3 מקומות: לפני המשתנה השני, אחרי המשתנה השני ו - בדיוק באמצע. יש בסיום
+          להדפיס את המחרוזת.<br />
+          לדוגמא: A ו SVCOLLEGE<br />
+          התוכנית צריכה לשים את האות A לפני, ואחרי ובאמצע &#8592; ASVCOALLEGEA
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q5
+                        let fiveA = 'Z';
+                        let fiveB = 'abcdefg';
+                        let fiveLength = fiveB.length;
+                        let fiveSplit = fiveLength / 2;
+                        fiveSplit = Math.round(fiveSplit);
+                        let fiveC = fiveB.substring(fiveSplit, fiveLength);
+                        fiveB = fiveA + fiveB.replace(fiveC, fiveA) + fiveC + fiveA;
+                        console.log(fiveB);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          6. יש לכתוב תוכנית בעלת 5 משתנים עם ערכים מספריים בפנים.<br />
+          א. התוכנית תדפיס את המכפלה של כל מהמשתנים אחד בשני.<br />
+          ב. יש לחשוב על דרך מתמטית כיצד לשלוף את ספרת האחדות ממספר מסוים.<br />
+          רמז : שימוש ב %.<br />
+          על התוכנית להדפיס את סכום ספרת האחדות של כל חמשת המשתנים.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q6
+                        let sixA = 11;
+                        let sixB = 22;
+                        let sixC = 33;
+                        let sixD = 44;
+                        let sixE = 55;
+                        console.log(sixA * sixB * sixC * sixD * sixE);
+                        let sixA2 = sixA % 10;
+                        let sixB2 = sixB % 10;
+                        let sixC2 = sixC % 10;
+                        let sixD2 = sixD % 10;
+                        let sixE2 = sixE % 10;
+                        console.log(sixA2 + sixB2 + sixC2 + sixD2 + sixE2);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          7. צור 2 מחרוזות וחבר ושרשר אותן עם רווח באמצע, החזר את אורך המחרוזת החדשה שיצרת.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q7
+                        let sevenA = 'abc';
+                        let sevenB = 'def';
+                        let sevenC = sevenA + ' ' + sevenB;
+                        console.log(sevenC);
+                        let sevenLength = sevenC.length;
+                        console.log(sevenLength);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          8. צור מחרוזת של השם הפרטי ושם המשפחה שלך, יש להחזיר את אורך כל אחד מהם בנפרד.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to Q8
+                        let eightA = 'Ben Elferink';
+                        let eightIndex = eightA.indexOf(' ');
+                        let eightLength = eightA.length;
+                        let eightFirstName = eightA.substring(0, eightIndex);
+                        console.log(eightFirstName, eightFirstName.length);
+                        eightIndex = eightIndex + 1;
+                        let eightLastName = eightA.substring(eightIndex, eightLength);
+                        console.log(eightLastName, eightLastName.length);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          BONUS: **תרגיל חשיבה מ - ראיון עבודה – יש ליצור 2 משתנים עם מספרים בלבד. יש להחליף בין ה -
+          משתנים ללא שימוש במשתנה עזר! רק בעזרת פעולות חשבון בסיסיות ( + - * / ) .
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+                        // Answer to BONUS
+                        let bonusA = 7;
+                        let bonusB = 35;
+                        console.log(bonusA);
+                        console.log(bonusB);
+                        bonusA = bonusA + bonusB;
+                        bonusB = bonusA - bonusB;
+                        bonusA = bonusA - bonusB;
+                        console.log(bonusA);
+                        console.log(bonusB);
+                    </pre
+            >
+          </div>
+        </div>
+      </section>
+      <div class="breakline"></div>
+      <div dir="rtl">
+        <h1>סיכום על ״מהדר״ ו״מפרשן״:</h1>
+        <br />
+        <h2>
+          מה ההבדל בין מפרשן (interpreter) למהדר (compiler)? – שניהם הרי גורמים לקוד של תוכנה לרוץ
+          על מכונה כלשהי.
+        </h2>
+        <br />
+        <br />
+        <span>מהדר (Compiler)</span> – מתרגם תוכנה שנכתבה בשפה “קריאה לאדם”, כיחידה שלמה, לקוד בשפת
+        מכונה (אפסים ואחדים) שמבוצע ישירות על המעבד.<br />
+        <span>מפרשן (Interpreter)</span> – מריץ את התוכנה, שורה אחר שורה ומפרשן כל שורה בנפרד. כל
+        שורה עוברת תרגום “משפת אדם” לשפת מכונה – ואז מורצת, וחוזר חלילה.<br />
+        <br />
+        אנו מבינים את הצורך במהדר, אך למה לכתוב מפרשן? הוא נשמע הרבה פחות יעיל!<br />
+        המוטיבציה העיקרית לכתיבת מפרשן היא, כנראה, העובדה שקל הרבה יותר לכתוב אותו.<br />
+        עבור שפות שאינן דורשות חישובים מהירים במיוחד, המפרשן הוא אלטרנטיבה המספקת חסם כניסה נמוך
+        לשפות חדשות. ניתן בהשקעה קטנה להגדיר שפה חדשה ולגרום לה לרוץ.<br />
+        מפרשן יכול לספק debugger בהשקעה אפסית כמעט – עוד יתרון.<br />
+        הקלות בכתיבת מפרשן יכולה להיות מתורגמת בקלות לכתיבת שפה cross-platform – יתרון נוסף.<br />
+        <br />
+        אולי כדאי שבעצם נשאל את עצמנו מה היתרון בכתיבת מהדר?<br />
+        מדוע להשקיע מאמץ רב בתוכנה שתתרגם שפה לפלטפורמה יחידה, ושמציבה אתגר משמעותי בכתיבת
+        debugger?<br />
+        התשובה היא פשוטה: ביצועים.<br />
+        מהדר עובד קשה פעם אחת – אך הוא מספק קוד מכונה שיכול לרוץ בצורה אופטימלית ללא התערבות בזמן
+        ריצה.<br />
+        מפרשן לעומת זאת – היא תוכנה שרצה ומפרשנת שורה אחר שורה. התקורה היא ברורה.<br />
+        <br />
+        <br />
+        <h1>המצב בפועל</h1>
+        <br />
+        <h2>בואו נבחן האם JavaScript הינה שפת-מהדר או שפת-מפרשן?</h2>
+        <br />
+        <br />
+        JavaScript הייתה במשך שנים דוגמה קלסית לשפת מפרשן.<br />
+        הסיבה העיקרית הייתה כנראה הרצון להריץ קוד שלה על סביבות שונות: כתוב את הקוד פעם אחת והוא
+        ירוץ על Safari (מאק), FireFox (לינוקס), או Internet Explorer (ווינדוס).<br />
+        אם הקוד קומפל לשפת מכונה אחת – הוא לא יתאים למכונה אחרת ולכן האפשרות היחידה היא לשלוח את קוד
+        המקור למחשב עליו רץ הדפדפן – ושם לפרשן אותו.<br />
+        בשנים האחרונות, הפכו נפוצים מהדרי JIT לשפת JavaScript. דוגמה בולטת היא מהדר הJIT של V8 –
+        מנוע הJavaScript של גוגל.<br />
+        התוצאה: קוד המקור נשלח לדפדפן לפני ההרצה, אך הדפדפן מחליט להדר אותו ואז להריץ אותו בשפת
+        מכונה – כך שבפועל כיום, JavaScript רצה מהודרת.<br />
+        הנה דוגמה ליתרון שבהידור. דמיינו את הקוד הנפוץ הבא:<br />
+        <div dir="ltr">
+          var a.b.c.d.e.f.g.h.x = 100;<br />
+          var a.b.c.d.e.f.g.h.y = 200;
+        </div>
+        כאשר a.b.c.d.e.f.g.h הם שמות namespaces או אובייקטים בJavaScript.<br />
+        כאשר יש מפרשן, עליו לקחת את אובייקט a ואז לחפש בו property בשם b, ואז על b לחפש property בשם
+        c וחוזר חלילה.<br />
+        ללא שיפורי ביצועים מיוחדים יכול להיות שמדובר בעשרות פעולות בזיכרון.<br />
+        מהדר לעומת זאת קורא את 2 השורות ומבין שיש פה אופציה לייעל את הקוד. הוא יכול להפוך את הקוד
+        ל:<br />
+        <div dir="ltr">
+          var _p = a.b.c.d.e.f.g.h;<br />
+          var p.x = 100;<br />
+          var p.y = 200;
+        </div>
+        שיהיה יעיל בהרבה.<br />
+        מכיוון שJavaScript היא שפה דינמית, עליו לוודא ש a עד h לא השתנו בעקבות ההשמה של x.<br />
+        כאן שוב יש מין “מיקרו מפרשן” שהמהדר מייצר ופועל בזמן ריצה.<br />
+        <br />
+        <br />
+        <h1>לסיכום</h1>
+        <br />
+        אומרים שבתיאוריה, תיאוריה ופרקטיקה הם אותו הדבר, אך בפרקטיקה – הם שונים.<br />
+        אני חושב שהפשטות של ההגדרה של מהדר (compiler) או מפרשן (interpreter) מול המורכבות של המצב
+        בפועל היא דוגמה יפה לאמירה זו.<br />
+      </div>
+      <div class="breakline"></div>
+    </main>
+    <footer></footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

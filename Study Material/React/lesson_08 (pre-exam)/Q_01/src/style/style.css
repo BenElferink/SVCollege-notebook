@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+.App table {
+  margin: 15px 0;
+}
+
+.App table select {
+  cursor: pointer;
+}
+
+.App button {
+  cursor: pointer;
+}
+
+.App .controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.App .history-parent {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .history-parent .history-child {
+  position: relative;
+  width: 250px;
+  margin: 5px 0;
+  border: 0.5px solid #000;
+  border-radius: 10px;
+}
+
+.App .history-parent .history-child p {
+  margin: 5px;
+}
+
+.App .history-parent .history-child span {
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  color: #ff0000;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

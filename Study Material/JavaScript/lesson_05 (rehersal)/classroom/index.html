@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            JS rehersal
+        </h1>
+        <h2>
+            Class by Orgad
+        </h2>
+    </header>
+    <main>
+        <div class="breakline"></div>
+        <section>
+            <div dir="rtl">
+                כתבו תכנית, המקבלת מספר, ובודקת אם המספר:<br />
+                <ol>
+                    <li>חיובי & זוגי</li>
+                    <li>חיובי & אי-זוגי</li>
+                    <li>שלילי & זוגי</li>
+                    <li>שלילי & אי-זוגי</li>
+                    <li>שווה ל-0</li>
+                </ol>
+            </div>
+            <div class="sub-breakline"></div>
+            <pre>
+let num = 7;
+if(num > 0 && num %2 == 0){
+    console.log(`${num}: is 'even' & 'positive'`);
+} else if(num < 0 && num %2 == 0){
+    console.log(`${num}: is 'even' & 'negative'`);
+} else if(num < 0 && num %2 != 0){
+    console.log(`${num}: is 'odd' & 'negative'`);
+} else if(num > 0 && num %2 != 0){
+    console.log(`${num}: is 'odd' & 'possitive'`);
+} else{
+    console.log(`${num}: is just a zero`);
+}
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div dir="rtl">
+                כתבו תכנית אשר בודקת, כמה אותיות גדולות יש במחרוזת.
+            </div>
+            <div class="sub-breakline"></div>
+            <pre>
+let str = 'BlArgHarGh';
+let counter = 0;
+for(let i = 0; i < str.length; i++){
+    if(str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90){
+        counter++;
+    }
+}
+console.log(`in ${str} there are ${counter} capital letters`);
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div dir="rtl">
+                כתבו פונקצייה אשר מקבלת מספר, ומחזירה האם המספר הוא ראשוני או לא.
+            </div>
+            <div class="sub-breakline"></div>
+            <pre>
+function primeNumber(x){
+    for(let i = 2; i < x; i++){
+        if(x %i == 0){
+            return `${x} is not a prime`;
+        }
+    }
+    return `${x} is a prime`;
+}
+let isPrime = primeNumber(13);
+console.log(isPrime);
+            </pre>
+        </section>
+        <div class="breakline"></div>
+            <section>
+                <div dir="rtl">
+                    כתבו תכנית, שרץ על מספרים בין 1-100, ותדפיס ״שבע בום״.
+                </div>
+                <div class="sub-breakline"></div>
+                <pre>
+let shevaBoom = 1;
+while(shevaBoom <= 100){
+    if(shevaBoom %7 == 0 || shevaBoom %10 == 7 || (shevaBoom >= 70 && shevaBoom <= 79)){
+        console.log('BOOM');
+    } else{
+        console.log(shevaBoom);
+    }
+    shevaBoom++;
+}
+                </pre>
+            </section>
+        <div class="breakline"></div>
+        <section>
+            <div dir="rtl">
+                כתבו פונקצייה שמקבלת מחרוזת, הפונקצייה תמיין את המחרוזת מהקטן לגדול.
+            </div>
+            <div class="sub-breakline"></div>
+            <pre>
+function reorder(x){
+    let i,j;
+    for(i = 0; i < x.length; i++){
+        for(j = 0; j < x.length - i - 1; j++){
+            if(x.charAt(j) > x.charAt(j + 1)){
+                x = x.slice(0,j) + x.charAt(j+1) + x.charAt(j) + x.slice(j+2);
+            }
+        }
+    }
+    console.log(x);
+}
+reorder('nfiehwrbvihrwbgibqv');
+            </pre>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

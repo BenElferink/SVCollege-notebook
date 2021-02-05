@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* header start */
+header {
+  background-color: rgb(0, 53, 128);
+  padding-bottom: 10px;
+}
+#top {
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  display: inline;
+  color: white;
+}
+span {
+  color: rgb(68, 158, 220);
+}
+#button-layout {
+  display: inline;
+  line-height: 80px;
+}
+#top button {
+  line-height: 175%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+#top button:hover {
+  color: rgb(0, 53, 128);
+}
+#property {
+  background-color: rgb(0, 53, 128);
+  color: white !important;
+  border: 1px solid white;
+}
+#property:hover {
+  background-color: rgb(40, 74, 136);
+}
+nav ul {
+  list-style-type: none;
+  margin: 0 200px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+nav a {
+  color: rgb(207, 215, 229);
+  text-decoration: none;
+  margin: 0 30px 0 15px;
+}
+nav a:hover {
+  color: white;
+}
+#selected {
+  text-decoration: underline;
+  font-weight: bold;
+  color: white !important;
+}
+/* header end */
+
+/* footer start */
+footer {
+  text-align: center;
+  background-color: rgb(8, 34, 76);
+  color: rgb(189, 189, 189);
+  padding: 50px 0;
+}
+footer h2 {
+  color: white;
+  display: inline;
+}
+#subscribe {
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  background-color: rgb(68, 158, 220);
+  color: white;
+}
+#email {
+  height: 50px;
+  width: 400px;
+  font-size: 18px;
+}
+/* footer end */
+
+/* home start */
+#flyto {
+  background-color: rgb(245, 245, 245);
+  padding: 50px 200px;
+  border: 0.5px solid grey;
+}
+#flyto h2 {
+  display: inline;
+}
+#destination {
+  line-height: 50px;
+  width: 300px;
+  font-size: 20px;
+}
+#date-start,
+#date-end,
+#amount {
+  line-height: 50px;
+  width: 150px;
+  font-size: 20px;
+}
+#search {
+  line-height: 50px;
+  width: 120px;
+  background-color: rgb(46, 113, 188);
+  color: white;
+  font-size: 20px;
+}
+#search:hover {
+  background-color: rgb(34, 89, 148);
+}
+/* split betwen "flyto" and "travel" */
+#travel {
+  margin: 1% auto;
+  width: 1080px;
+  height: 640px;
+}
+.set1 {
+  border: 1px solid black;
+  height: 320px;
+  width: 530px;
+  display: inline-block;
+}
+.set1:hover {
+  height: 330px !important;
+  width: 540px !important;
+}
+.set2 {
+  border: 1px solid black;
+  height: 300px;
+  width: 350px;
+  display: inline-block;
+}
+.set2:hover {
+  height: 310px !important;
+  width: 360px !important;
+}
+#amsterdam {
+  background: url(./../img/amsterdam.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+#telaviv {
+  background: url(./../img/telaviv.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  left: 15px;
+}
+#dubai {
+  background: url(./../img/dubai.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  top: 10px;
+}
+#newyork {
+  background: url(./../img/newyork.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+#southafrica {
+  background: url(./../img/southafrica.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+.travelpic {
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* home end */
+
+/* error start */
+.error {
+  text-align: center;
+  font-size: 35px;
+  width: 80%;
+  margin: 6% auto 15% auto;
+  padding: 5% 0;
+  border: 2px solid black;
+}
+main .error span {
+  text-decoration: overline;
+  color: rgb(40, 74, 136);
+}
+/* error end */

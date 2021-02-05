@@ -1,0 +1,7 @@
+.add-product {
+  @include flex-col;
+
+  label {
+    @include flex-col;
+  }
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Homework: JS-lesson7</h1>
+    </header>
+    <main>
+      <section>
+        <div class="question" dir="rtl">
+          1. כתבו תוכנית הבודקת את כל המספרים מ100 עד 999 (תלת ספרתיים) ומדפיסה את המספרים שספרת
+          האחדות שלהם שווה לספרת העשרות.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q1
+              var funcQ1 = () => {
+                console.log('Answer to Q1');
+                for (let i = 100; i < 1000; i++) {
+                  let units = i % 10;
+                  let hundreds = parseInt(i / 100);
+                  if (units == hundreds) {
+                    console.log(i);
+                  }
+                }
+              };
+              funcQ1();
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          2. כתבו תוכנית המדפיסה את כל המספרים הדו ספרתיים האי זוגיים המתחלקים ב- 3 ללא שארית מהסוף
+          להתחלה (מהמספר 99 ועד המספר 10).
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q2
+              var funcQ2 = () => {
+                console.log('Answer to Q2');
+                for (let i = 99; i > 9; i--) {
+                  if (i % 2 != 0 && i % 3 == 0) {
+                    console.log(i);
+                  }
+                }
+              };
+              funcQ2();
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          3. כתבו תוכנית המדפיסה את כל המספרים הדו ספרתיים הזוגיים שספרת האחדות היא חצי מספרת
+          העשרות.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q3
+              var funcQ3 = () => {
+                console.log('Answer to Q3');
+                for (let i = 10; i < 100; i++) {
+                  let units = i % 10;
+                  let tens = parseInt(i / 10);
+                  if (i % 2 == 0 && tens / 2 == units) {
+                    console.log(i);
+                  }
+                }
+              };
+              funcQ3();
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          4. קלוט מחרוזת והדפס כמה מבין האותיות הקטנות מהאלפבית הלועזי מופיעות בה (ללא כפילויות)<br />
+          לדוגמא: עבור המחרוזת "?balloon blue "יודפס 7.
+        </div>
+        <div class="flex">
+          <div class="interact">
+            <input type="text" id="q4" placeholder="string" />
+            <button onclick="funcQ4(document.getElementById('q4').value)">run script.js</button>
+            <p>Answer? <span id="q4-addTo"></span></p>
+          </div>
+          <div class="code">
+            <pre>
+              / Answer to Q4
+              var funcQ4 = (str) => {
+                let lowercaseLetters = [];
+                //   this loop gets all the lowercase letters from the string
+                for (let i = 0; i < str.length; i++) {
+                  if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+                    lowercaseLetters.push(str.charAt(i));
+                  }
+                }
+                //   this line sorts all the letters from small to big
+                lowercaseLetters.sort();
+                //   this loop removes the duplicated letters
+                for (let i = 0; i < lowercaseLetters.length; i++) {
+                  for (let j = i + 1; j < lowercaseLetters.length; j++) {
+                    if (lowercaseLetters[i] == lowercaseLetters[j]) {
+                      lowercaseLetters.splice(j, 1);
+                      j = i;
+                    }
+                  }
+                }
+                //   here we display the answer
+                let element = document.getElementById('q4-addTo');
+                element.innerText = lowercaseLetters.length;
+                element.style.color = 'blue';
+                element.style.backgroundColor = 'white';
+              };
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          5. כתבו פונקציה שתקבל מספר שלם בין 1 ל– 12(כולל), שמייצג מספר של חודש בשנה.<br />
+          אם מספר החודש הוא 7 או 8 , הפעולה תחזיר "vacation" , אחרת הפעולה תחזיר " "school
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q5
+              var funcQ5 = () => {
+                console.log('Answer to Q5');
+                let randomNum = Math.floor(Math.random() * 12 + 1);
+                if (randomNum == 7 || randomNum == 8) {
+                  console.log(`month_${randomNum} = vacation`);
+                } else {
+                  console.log(`month_${randomNum} = school`);
+                }
+              };
+              funcQ5();
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          6. כתבו פונקציה המקבלת מחרוזת באורך של עד 20 תווים.<br />
+          המחרוזת בנויה מתת-מחרוזות המכילות אותיות, בסוף כל תת-מחרוזת מופיע התו '*'.<br />
+          על הפונקציה להדפיס את התו האמצעי או את התווים האמצעיים של כל תת-מחרוזת, באופן הבא:<br />
+          אם תת-המחרוזת היא באורך אי-זוגי - יודפס התו האמצעי שלה.<br />
+          אם תת-המחרוזת היא באורך זוגי, יודפסו שני התווים האמצעיים.<br />
+          לדוגמה:<br />
+          הפונקציה קיבלה מחרוזת: DEFA*KBBG*X*ABC*<br />
+          הפונקציה תדפיס: EF BB X B<br />
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q6
+              var funcQ6 = (str) => {
+                console.log('Answer to Q6');
+                // checks if string length qualifies
+                if (str.length <= 20) {
+                  // this loop fetches the substrings
+                  let arr = [];
+                  for (let i = 0; true; ) {
+                    if (str.indexOf('*') != -1) {
+                      arr[i] = str.substring(0, str.indexOf('*'));
+                      str = str.replace(arr[i] + '*', '');
+                      i++;
+                    } else {
+                      break;
+                    }
+                  }
+                  // this picks the 1-2 middle chars of each substring
+                  let mappedArr = arr.map((subStr) => {
+                    let newStr;
+                    if (subStr.length % 2 != 0) {
+                      newStr = subStr.charAt(subStr.length / 2);
+                    } else if (subStr.length % 2 == 0) {
+                      newStr = subStr.charAt(subStr.length / 2 - 1);
+                      newStr += subStr.charAt(subStr.length / 2);
+                    }
+                    return newStr;
+                  });
+                  // this prints our required items individually
+                  mappedArr.forEach((char) => {
+                    console.log(char);
+                  });
+                } else {
+                  console.log('string length must be lower than 20');
+                }
+              };
+              funcQ6('DEFA*KBBG*X*ABC*');
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          7. כתוב פונקציה המקבלת מחרוזת str, מספר שלם ,place ותת מחרוזת sub .<br />
+          הפונקציה מחזירה מחרוזת חדשה שבה "נשתלת" תת המחרוזת sub בתוך המחרוזת str החל מהמקום ה.
+          Place<br />
+          למשל:<br />
+          Str = 'ABCDEFG'<br />
+          Sub = 'ZZZ'<br />
+          Place=4<br />
+          Str ='ABCDZZZEFG' <br />
+        </div>
+        <div class="flex">
+          <div class="interact">
+            <input type="text" id="q7-str" placeholder="string" />
+            <input type="text" id="q7-substr" placeholder="substring" />
+            <input type="number" id="q7-num" placeholder="number (place)" />
+            <button
+              onclick="funcQ7(document.getElementById('q7-str').value, document.getElementById('q7-substr').value, document.getElementById('q7-num').value)"
+            >
+              run script.js
+            </button>
+            <p>Answer? <span id="q7-addTo"></span></p>
+          </div>
+          <div class="code">
+            <pre>
+              // Answer to Q7
+              var funcQ7 = (str, subStr, num) => {
+                let strPartOne = str.slice(0, num);
+                let strPartTwo = str.slice(num);
+                let newStr = `${strPartOne}${subStr}${strPartTwo}`;
+                let element = document.getElementById('q7-addTo');
+                element.innerText = newStr;
+                element.style.color = 'blue';
+                element.style.backgroundColor = 'white';
+              };
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          8. כתוב תכנית הקולט מחרוזת ומדפיס כמה אותיות ניקוד יש בה (u, o, i, e, a)
+        </div>
+        <div class="flex">
+          <div class="interact">
+            <input type="text" id="q8" placeholder="string" />
+            <button onclick="funcQ8(document.getElementById('q8').value)">run script.js</button>
+            <p>Answer? <span id="q8-addTo"></span></p>
+          </div>
+          <div class="code">
+            <pre>
+              // Answer to Q8
+              var funcQ8 = (str) => {
+                let counter = 0;
+                for (let i = 0; i < str.length; i++) {
+                  let char = str.charAt(i);
+                  if (
+                    char == 'a' ||
+                    char == 'e' ||
+                    char == 'i' ||
+                    char == 'o' ||
+                    char == 'u'
+                  ) {
+                    counter++;
+                  }
+                }
+                let element = document.getElementById('q8-addTo');
+                element.innerText = counter;
+                element.style.color = 'blue';
+                element.style.backgroundColor = 'white';
+              };
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          9. כתבו פונקציה המקבלת מחרוזת .str<br />
+          התווים במחרוזת יכולים להיות האותיות A עד Z (כולל) והתוו רווח ' '<br />
+          במחרוזת יש מילים המורכבות מאותיות בלבד, ואחרי כל מילה (כולל המילה האחרונה( יש רווח אחד
+          בלבד.<br />
+          התו הראשון במחרוזת הוא אות. <br />
+          הפונקציה תדפיס את מספר המילים במחרוזת המסתיימות באות Y<br />
+          <br />
+          לדוגמה, בעבור המחרוזת: YOU TO BIRTHDAY HAPPY <br />
+          קטע התכנית יציג כפלט את המספר 2.<br />
+        </div>
+        <div class="flex">
+          <div class="interact">
+            <input type="text" id="q9" placeholder="string" />
+            <button onclick="funcQ9(document.getElementById('q9').value)">run script.js</button>
+            <p>Answer? <span id="q9-addTo"></span></p>
+          </div>
+          <div class="code">
+            <pre>
+              // Answer to Q9
+              var funcQ9 = (str) => {
+                let counter = 0;
+                for (let i = 0; i < str.length; i++) {
+                  if (str.charAt(i) == ' ') {
+                    if (str.charAt(i - 1) == 'Y') {
+                      counter++;
+                    }
+                  }
+                }
+                let element = document.getElementById('q9-addTo');
+                element.innerText = counter;
+                element.style.color = 'blue';
+                element.style.backgroundColor = 'white';
+              };
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          10. כתוב פונקציה אשר תגריל מספרים אקראיים בין 0-10 כולל, עד אשר סכום המספרים יהיה גדול
+          מ70, התכנית תחזיר כמה מספרים הוגרלו ואת הסכום.
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q10
+              var funcQ10 = () => {
+                console.log('Answer to Q10');
+                let randomNum;
+                let sum = 0;
+                let counter = 0;
+                while (sum < 70) {
+                  randomNum = Math.floor(Math.random() * 11);
+                  sum += randomNum;
+                  counter++;
+                }
+                console.log(`the sum is ${sum}`);
+                console.log(`${counter} numbers have been lotted`);
+              };
+              funcQ10();
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          11. כתבו תוכנית אשר תגדיר מערך דו מימדי (מטריצה) מגודל 10*10 אשר ייצג את לוח הכפל ולאחר
+          מכן תדפיס אותו למסך
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q11
+              var funcQ11 = () => {
+                console.log('Answer to Q11');
+                let mat = [];
+                for (let i = 1; i <= 10; i++) {
+                  mat.push(new Array());
+                  for (let j = 1; j <= 10; j++) {
+                    let res = i * j;
+                    mat[i - 1][j - 1] = `${i}x${j}=${res}`;
+                  }
+                }
+                console.table(mat);
+              };
+              funcQ11();
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="question" dir="rtl">
+          12. כתבו תוכנית המגדירה 2 מטריצות בגודל 4x4, ומגדירה מטריצה שלישית אשר תהיה חיבור
+          המטריצות.<br />
+          תזכורת:<br />
+          חיבור מטריצות הינו החיבור של איברים מתאימים במטריצות (כלומר האיבר במקום ה-i,j במטריצה א'
+          עם האיבר במקום ה-i,j במטריצה ב').
+        </div>
+        <div class="flex">
+          <div class="code">
+            <pre>
+              // Answer to Q12
+              var funcQ12 = () => {
+                console.log('Answer to Q12');
+                let mat1 = [
+                  [1, 2, 3, 4],
+                  [5, 6, 7, 8],
+                  [9, 0, 1, 2],
+                  [3, 4, 5, 6],
+                ];
+                let mat2 = [
+                  [7, 8, 9, 0],
+                  [1, 2, 3, 4],
+                  [5, 6, 7, 8],
+                  [9, 0, 1, 2],
+                ];
+                let mat3 = [];
+                for (let i = 0; i < 4; i++) {
+                  mat3.push(new Array());
+                  for (let j = 0; j < 4; j++) {
+                    mat3[i][j] = mat1[i][j] + mat2[i][j];
+                  }
+                }
+                console.log(mat3);
+              };
+              funcQ12();
+            </pre>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Register to Porn<span>hub</span></a></h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <p>Create a username:</p>
+                <input type="text" name="uname" id="uname" placeholder="Username">
+                <p id="addToName" class="js-fail"></p>
+            </div>
+            <div>
+                <p>Enter a valid email:</p>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <p id="addToMail" class="js-fail"></p>
+            </div>
+            <div>
+                <p>Create a password:</p>
+                <input type="password" name="newPass" id="newPass" placeholder="New Password">
+                <p id="addToNewPass" class="js-fail"></p>
+            </div>
+            <div>
+                <p>Confirm password:</p>
+                <input type="password" name="againPass" id="againPass" placeholder="Confirm Password">
+                <p id="addToAgainPass" class="js-fail"></p>
+            </div>
+            <div class="agree">
+                <p><input type="checkbox" name="over18" id="over18"> I am over the age of 18</p>
+                <p id="addTo18" class="js-fail"></p>
+            </div>
+            <div class="send">
+                <button onclick="register(document.getElementById('uname').value, document.getElementById('email').value, document.getElementById('newPass').value, document.getElementById('againPass').value, document.getElementById('over18').checked)">
+                    Sign Up
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

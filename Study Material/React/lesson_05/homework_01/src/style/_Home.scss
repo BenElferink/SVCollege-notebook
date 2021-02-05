@@ -1,0 +1,9 @@
+.home {
+  @include flex-col;
+
+  nav {
+    margin-bottom: 50px;
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+}

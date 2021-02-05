@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SVCollege</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <h1>SVCo<span>llege summary</span></h1>
+        <img src="./img/sv-logo.jpg" alt="img" />
+      </div>
+      <div id="sub-logo">
+        <a onclick="showModal('html')">index<span class="html">.html</span></a>
+        <a onclick="showModal('html')">style<span class="css">.css</span></a>
+        <a onclick="showModal('js')">script<span class="js">.js</span></a>
+        <a onclick="showModal('boot')"><span class="boot">Bootstrap</span></a>
+        <a onclick="showModal('react')"><span class="react">React</span></a>
+      </div>
+    </header>
+    <main>
+      <!-- Everything HTML & CSS -->
+      <div class="container">
+        <!-- Title -->
+        <div class="row spacing">
+          <div class="col-12">
+            <h2 class="class-title">HTML and CSS</h2>
+          </div>
+        </div>
+        <!-- Row #1 -->
+        <div class="row spacing">
+          <!-- Lesson #1 -->
+          <div class="col-4">
+            <div class="card">
+              <h2>Lesson 1</h2>
+              <button onclick="showModal(0)" class="show-modal html-css-btn">OPEN</button>
+              <p>Block & Inline Elements, adding CSS</p>
+            </div>
+          </div>
+          <!-- Lesson #2 -->
+          <div class="col-4">
+            <div class="card">
+              <h2>Lesson 2</h2>
+              <button onclick="showModal(1)" class="show-modal html-css-btn">OPEN</button>
+              <p>Tables, Links, Images, Lists, nav</p>
+            </div>
+          </div>
+          <!-- Lesson #3 -->
+          <div class="col-4">
+            <div class="card">
+              <h2>Lesson 3</h2>
+              <button onclick="showModal(2)" class="show-modal html-css-btn">OPEN</button>
+              <p>Size, Position, Margin, Padding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Everything JavaScript -->
+      <div class="container">
+        <!-- Title -->
+        <div class="row spacing">
+          <div class="col-12">
+            <h2 class="class-title">JavaScript</h2>
+          </div>
+        </div>
+        <!-- Row #1 -->
+        <div class="row spacing">
+          <!-- Lesson #1 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 1</h2>
+              <button onclick="showModal(3)" class="show-modal js-btn">OPEN</button>
+              <p>DOM & Variables</p>
+            </div>
+          </div>
+          <!-- Lesson #2 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 2</h2>
+              <button onclick="showModal(4)" class="show-modal js-btn">OPEN</button>
+              <p>Conditions & Functions</p>
+            </div>
+          </div>
+          <!-- Lesson #3 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 3</h2>
+              <button onclick="showModal(5)" class="show-modal js-btn">OPEN</button>
+              <p>Loops</p>
+            </div>
+          </div>
+          <!-- Lesson #4 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 4</h2>
+              <button onclick="showModal(6)" class="show-modal js-btn">OPEN</button>
+              <p>Arrays</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row #2 -->
+        <div class="row spacing">
+          <!-- Lesson #(Rehersal) -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Rehersal</h2>
+              <button onclick="showModal(7)" class="show-modal js-btn">OPEN</button>
+            </div>
+          </div>
+          <!-- Lesson #5 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 5</h2>
+              <button onclick="showModal(8)" class="show-modal js-btn">OPEN</button>
+              <p>Arrays & Matrix</p>
+            </div>
+          </div>
+          <!-- Lesson #6 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 6</h2>
+              <button onclick="showModal(9)" class="show-modal js-btn">OPEN</button>
+              <p>Objects</p>
+            </div>
+          </div>
+          <!-- Lesson #7 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 7</h2>
+              <button onclick="showModal(10)" class="show-modal js-btn">OPEN</button>
+              <p>Arrow Functions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Everything Bootstrap -->
+      <div class="container">
+        <!-- Title -->
+        <div class="row spacing">
+          <div class="col-12">
+            <h2 class="class-title">Bootstrap</h2>
+          </div>
+        </div>
+        <!-- Row #1 -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <h2>Introduction</h2>
+              <button onclick="showModal(11)" class="show-modal boot-btn">OPEN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Everything React -->
+      <div class="container">
+        <!-- Title -->
+        <div class="row spacing">
+          <div class="col-12">
+            <h2 class="class-title">React</h2>
+          </div>
+        </div>
+        <!-- Row #1 -->
+        <div class="row spacing">
+          <!-- Lesson #1 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 1</h2>
+              <button onclick="showModal(12)" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+          <!-- Lesson #2 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 2</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+          <!-- Lesson #3 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 3</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+          <!-- Lesson #4 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 4</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row #2 -->
+        <div class="row spacing">
+          <!-- Lesson #5 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 5</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+          <!-- Lesson #6 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 6</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+          <!-- Lesson #7 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 7</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+          <!-- Lesson #8 -->
+          <div class="col-3">
+            <div class="card">
+              <h2>Lesson 8</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row #3 -->
+        <div class="row spacing">
+          <!-- Lesson #9 -->
+          <div class="col-12">
+            <div class="card">
+              <h2>Lesson 9</h2>
+              <button onclick="reactNotSupported()" class="show-modal react-btn">OPEN</button>
+              <p>?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="signature">Developed by Ben Elferink</div>
+    </footer>
+    <!-- Modal hidden/shown -->
+    <section id="modal">
+      <div id="modal-content">
+        <div class="row" id="modal-nav">
+          <div class="col-11" id="file-links"></div>
+          <div class="col-1">
+            <button onclick="closeModal()" class="close">&times;</button>
+          </div>
+        </div>
+        <iframe name="iframe" id="iframe" frameborder="0" height="95%" width="100%"></iframe>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

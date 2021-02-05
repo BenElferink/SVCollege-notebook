@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  display: grid;
+  place-items: center;
+}
+body {
+  background-color: #e7e7e7;
+}
+.breakline {
+  border: 1px solid black;
+  background-color: black;
+  width: 100%;
+  margin: 20px 0;
+}

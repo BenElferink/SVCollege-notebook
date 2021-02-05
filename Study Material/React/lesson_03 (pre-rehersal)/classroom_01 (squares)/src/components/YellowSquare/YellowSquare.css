@@ -1,0 +1,20 @@
+.main {
+  display: grid;
+  place-items: center;
+  /* border: 1px solid black; */
+  width: fit-content;
+  padding: 2rem;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.yellow-box {
+  height: 150px;
+  width: 150px;
+  /* background-color: yellow; */
+  border: 1px solid black;
+}
+
+button {
+  margin-top: 1rem;
+}
