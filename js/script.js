@@ -353,22 +353,4 @@ function fileLinks(lessonId) {
 
     return './Study Material/Bootstrap/lesson_01/classroom/index.html';
   }
-
-  // REACT - LESSON 1
-  if (lessonId == 12) {
-    let a1 = document.createElement('a');
-    a1.innerText = 'Classroom';
-    a1.setAttribute('target', 'iframe');
-    a1.setAttribute('href', './Study Material/React/lesson_01/classroom/build/index.html');
-
-    let a2 = document.createElement('a');
-    a2.innerText = 'Homework_01';
-    a2.setAttribute('target', 'iframe');
-    a2.setAttribute('href', './Study Material/React/lesson_01/homework_01/build/index.html');
-
-    id('file-links').appendChild(a1);
-    id('file-links').appendChild(a2);
-
-    return './Study Material/React/lesson_01/classroom/build/index.html';
-  }
 }

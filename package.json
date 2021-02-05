@@ -1,0 +1,18 @@
+{
+  "homepage": "https://github.com/belferink1996/SVCollege-notebook",
+  "name": "svcollege-notebook",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "author": "Ben Elferink",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belferink1996/SVCollege-notebook.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
