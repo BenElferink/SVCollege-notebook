@@ -1,0 +1,39 @@
+body {
+  font-family: serif;
+  background-color: #e7e7e7;
+  padding: 0;
+  margin: 2em;
+}
+
+/* start */
+/* header */
+header {
+  display: inline;
+  text-align: center;
+  margin: 2em;
+}
+header h1 {
+  font-family: Arial;
+  margin: auto;
+}
+header h1 span {
+  text-decoration: overline;
+}
+header div {
+  margin: auto;
+}
+/* header */
+/* end */
+
+/* start */
+/* main */
+main {
+  display: grid;
+  place-items: center;
+  margin: 2em;
+}
+main p {
+  margin: 0;
+}
+/* main */
+/* end */

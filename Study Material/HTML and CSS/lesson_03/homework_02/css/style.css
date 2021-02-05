@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* header start */
+header {
+  background-color: rgb(0, 53, 128);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#top {
+  margin: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  color: white;
+}
+span {
+  color: rgb(68, 158, 220);
+}
+#button-layout {
+  line-height: 10vh;
+}
+#top button {
+  line-height: 175%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+#top button:hover {
+  color: rgb(0, 53, 128);
+}
+#property {
+  background-color: rgb(0, 53, 128);
+  color: white !important;
+  border: 1px solid white;
+}
+#property:hover {
+  background-color: rgb(40, 74, 136);
+}
+nav ul {
+  list-style-type: none;
+  margin: 0 10vw;
+  padding: 0 0 2vh 0;
+  display: flex;
+  justify-content: flex-start;
+}
+nav a {
+  color: rgb(207, 215, 229);
+  text-decoration: none;
+  margin: 0 2vw 0 2vw;
+}
+nav a:hover {
+  color: white;
+}
+#selected {
+  text-decoration: underline;
+  font-weight: bold;
+  color: white !important;
+}
+/* header end */
+
+/* footer start */
+footer {
+  text-align: center;
+  background-color: rgb(8, 34, 76);
+  color: rgb(189, 189, 189);
+  padding: 50px 0;
+}
+footer h2 {
+  color: white;
+  display: inline;
+}
+#subscribe {
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  background-color: rgb(68, 158, 220);
+  color: white;
+}
+#email {
+  height: 50px;
+  width: 400px;
+  font-size: 18px;
+}
+/* footer end */
+
+/* home start */
+#flyto {
+  background-color: rgb(245, 245, 245);
+  padding: 5vh 10vw;
+  border: 0.5px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+#flyto h2 {
+  margin: 0;
+}
+#flyto div {
+  display: flex;
+}
+#destination,
+#date-start,
+#date-end,
+#amount,
+#search {
+  height: 5vh;
+  font-size: 20px;
+}
+#search {
+  background-color: rgb(46, 113, 188);
+  color: white;
+}
+#search:hover {
+  background-color: rgb(34, 89, 148);
+}
+/* split betwen "flyto" and "travel" */
+#travel-contain {
+  margin: 1vh 10vw;
+}
+.travel {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.travelIMG {
+  border: 1px solid black;
+  height: 40vh;
+  flex: 1;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+.travelIMG:hover {
+  transform: scale(1.1);
+}
+#amsterdam {
+  background: url(./../img/amsterdam.jpg) no-repeat center;
+  background-size: cover;
+}
+#telaviv {
+  background: url(./../img/telaviv.jpg) no-repeat center;
+  background-size: cover;
+}
+#dubai {
+  background: url(./../img/dubai.jpg) no-repeat center;
+  background-size: cover;
+}
+#newyork {
+  background: url(./../img/newyork.jpg) no-repeat center;
+  background-size: cover;
+}
+#southafrica {
+  background: url(./../img/southafrica.jpg) no-repeat center;
+  background-size: cover;
+}
+/* home end */
+
+/* error start */
+.error {
+  text-align: center;
+  font-size: 35px;
+  width: 80%;
+  margin: 6% auto 15% auto;
+  padding: 5% 0;
+  border: 2px solid black;
+}
+main .error span {
+  text-decoration: overline;
+  color: rgb(40, 74, 136);
+}
+/* error end */

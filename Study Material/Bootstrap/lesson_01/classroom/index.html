@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <header>
+      <br />
+      <h1>
+        <a href="https://getbootstrap.com" target="blank">Bootstrap</a>
+        Introduction
+      </h1>
+      <h5>
+        Begin code with
+        <code>&lt;!DOCTYPE html&gt;</code>
+      </h5>
+      <h5>
+        <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" target="blank"
+          >Link:CSS</a
+        >
+        required in
+        <code>&lt;head&gt;</code>
+      </h5>
+    </header>
+    <main>
+      <br />
+      <section class="line"></section>
+      <br />
+      <div class="neutral">
+        <p>
+          For full grid:<br />
+          begin with div class "row",<br />
+          each "row" has divs classes "col-x", where 'x' is a number between 1-12.<br />
+          Each "row" can add multiple "col", which their sum is 12.
+        </p>
+        <section class="subline"></section>
+        <br />
+        <p>Here is a div "row", within it 3 divs "col-x", their sum is 12.</p>
+      </div>
+      <div class="row neutral">
+        <div class="col-5">
+          <span>class="col-5"</span>
+        </div>
+        <div class="col-3">
+          <span>class="col-3"</span>
+        </div>
+        <div class="col-4">
+          <span>class="col-4"</span>
+        </div>
+      </div>
+      <div class="neutral">
+        <br />
+        <p>
+          Here are multiple rows, with different columns,<br />
+          all in one div with the class "container":
+        </p>
+      </div>
+      <div class="container neutral">
+        <div class="row neutral">
+          <div class="col-7">
+            <span>col-7</span>
+          </div>
+          <div class="col-5">
+            <span>col-5</span>
+          </div>
+        </div>
+        <div class="row neutral">
+          <div class="col-3">
+            <span>col-3</span>
+          </div>
+          <div class="col-3">
+            <span>col-3</span>
+          </div>
+          <div class="col-2">
+            <span>col-2</span>
+          </div>
+          <div class="col-4">
+            <span>col-4</span>
+          </div>
+        </div>
+        <div class="row neutral">
+          <div class="col-12">
+            <span>col-12</span>
+          </div>
+        </div>
+        <div class="row neutral">
+          <div class="col-4">
+            <span>col-4</span>
+          </div>
+          <div class="col-4">
+            <span>col-4</span>
+          </div>
+          <div class="col-4">
+            <span>col-4</span>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <section class="line"></section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

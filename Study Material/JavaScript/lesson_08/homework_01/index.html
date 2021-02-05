@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Homework: JS-lesson7
+        </h1>
+    </header>
+    <main>
+        <section>
+            <div class="question" dir="rtl">
+                1) כתוב פונקציה אשר מקבלת מחרוזת ומחזירה ערך בוליאני האם גודלה מעל 5 תווים.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q1
+                        console.log('Answer to Q1');
+                        let funcQ1 = (str) =>{
+                            if(str.length > 5){
+                                return true
+                            } else{
+                                return false
+                            }
+                        }
+                        console.log(funcQ1('abcdefgh'));
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                2) כתוב פונקציה המקבלת מחרוזת, הפונקציה תבדוק אם התא הראשון והאחרון זהים ותחזיר הודעות בהתאם.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q2
+                        console.log('Answer to Q2');
+                        let funcQ2 = (str) =>{
+                            if(str.charAt(0) == str.charAt(str.length-1)){
+                                return "first & last letters are similar"
+                            } else{
+                                return "first & last letter are different"
+                            }
+                        }
+                        console.log(funcQ2('abcdefga'));
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                3) כתוב פונקציה המקבלת מחרוזת, הפונקציה תבדוק אם התו האחרון הוא אות גדולה, אם כן תחזיר "אמת" אחרת תחזיר "שקר".
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q3
+                        console.log('answer to Q3');
+                        let funcQ3 = (str) =>{
+                            let lastLetter = str.charAt(str.length-1);
+                            if(lastLetter >= 'A' && lastLetter <= 'Z'){
+                                return true
+                            } else{
+                                return false
+                            }
+                        }
+                        console.log(funcQ3('beN'));
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                4) כתבו תכנית אשר קולטת מערך המכיל 8 מספרים, התכנית תדפיס את המספרים המתחלקים ב 3 ללא שארית ואת המיקום שלהם במערך.<br />
+                במידה ואף מספר במערך לא מתחלק ב3 ללא שארית יודפס "array not divided by 3".
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q4
+                        console.log('Answer to Q4');
+                        let arrQ4 = [1,2,3,4,5,6,7,8];
+                        let counterQ4 = 0;
+                        arrQ4.forEach((num, i, arr)=>{
+                            if(num%3 == 0){
+                                console.log(`${num} at index ${i} divides by 3`);
+                                counterQ4++;
+                            }
+                            if(i == arr.length-1){
+                                if(counterQ4 == 0){
+                                    console.log('none of the numbers divide by 3');
+                                }
+                            }
+                        });
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                5) בנו מערך של אובייקטים, כל תא במערך מכיל 3 מאפיינים – שם, גיל ות"ז.<br />
+                כתבו תכנית אשר עוברת על כל איברי המערך ומדפיסה את שמות האנשים המתחילים באות b והם בני יותר מ 20.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q5
+                        console.log('Answer to Q5');
+                        let arrQ5 = [
+                            {name: 'ben', age: 23, id: 1},
+                            {name: 'sun', age: 24, id: 2},
+                            {name: 'tomer', age: 22, id: 3}
+                        ];
+                        arrQ5.forEach((obj, i, arr)=>{
+                            if(obj.name.charAt(0) == 'b' && obj.age > 20){
+                                console.log(obj.name);
+                            }
+                        });
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                6) כתוב תכנית אשר קולטת מערך של אותיות גדולות וקטנות, התכנית תעבור על איברי המערך ותיצור מערך חדש כאשר כל תא במערך יבדוק האם התא המקביל במערך הקודם היה אות גדולה או קטנה ויציג זאת בהתאם.<br />
+                U – מייצג אות גדולה uppercase<br />
+                L – מייצג אות קטנה lowercase
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        / Answer to Q6
+                        console.log('Answer to Q6');
+                        let arrQ6 = ['a', 'B', 'c', 'D', 'e', 'f', 'G'];
+                        let newArrQ6 = arrQ6.map((char, i, arr)=>{
+                            if(char >= 'A' && char <= 'Z'){
+                                return 'U'
+                            } else if(char >= 'a' && char <= 'z'){
+                                return 'L'
+                            }
+                        });
+                        console.log(newArrQ6);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                7) כתבו תכנית אשר קולטת את המערך הבא: ['a','b','c','d','e','f'] , התכנית תעבור על כל איברי המערך, כל תא הנמצא במיקום זוגי (אינדקס) - יוחלף התוכן לאינדקס עצמו
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q7
+                        console.log('Answer to Q7');
+                        let arrQ7 = ['a', 'b', 'c', 'd', 'e', 'f'];
+                        let newArrQ7 = arrQ7.map((char, i, arr)=>{
+                            if(i%2 == 0 ){
+                                return i
+                            } else{
+                                return char
+                            }
+                        });
+                        console.log(newArrQ7);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                8) כתוב פונקציה המקבלת מערך גילאים, התוכנית תיצור מערך חדש רק עם הגילאים שהם מעל 18.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q8
+                        console.log('Answer to Q8');
+                        let arrQ8 = [4, 7, 16, 18 ,21 ,23, 69, 11];
+                        let newArrQ8 = arrQ8.filter((num)=>(num>18));
+                        console.log(newArrQ8);
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                9) כתוב פונקציה הקולטת את המערך הבא: [2,4,1,2,7,2,8]<br />
+                א. הפונקציה תיצור מערך חדש ללא הערכים הכפולים.<br />
+                ב. הפונקציה תיצור מערך חדש ללא אינדקס 3.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q9
+                        console.log('Answer to Q9');
+                        let arrQ9 = [2,4,1,2,7,2,8];
+                        let funcQ9 = (arr) => {
+                            for(let i=0; i < arr.length; i++){
+                                for(let j=i+1; j < arr.length; j++){
+                                    if(arr[i] == arr[j]){
+                                        arr.splice(j, 1);
+                                    }
+                                }
+                            }
+                            return arr.filter((num, i)=>(i!=3));
+                        }
+                        console.log(funcQ9(arrQ9));
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                10) כתוב פונקציה המקבלת שם ומוסיפה אותו למערך חיצוני של שמות (מלחוץ לפונקציה).
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q10
+                        console.log('Answer to Q10');
+                        let arrQ10 = ['name1', 'name2', 'name3'];
+                        let funcQ10 = (name) => {
+                            return [...arrQ10, name];
+                        }
+                        console.log(funcQ10('name4'));
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                11) כתוב תכנית הקולטת 2 מערכים של שמות, התכנית תיצור מערך אחד מאוחד עם כלל   השמות מ 2 המערכים.
+            </div>
+            <div class="flex">
+                <div class="code">
+                    <pre>
+                        // Answer to Q11
+                        console.log('Answer to Q11');
+                        let firstArrQ11 = ['name1', 'name2', 'name3'];
+                        let secondArrQ11 = ['name4', 'name5', 'name6'];
+                        let funcQ11 = (arr1, arr2) => {
+                            return [...arr1, ...arr2]
+                        }
+                        let thirdArrQ11 = funcQ11(firstArrQ11, secondArrQ11);
+                        console.log(thirdArrQ11);
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

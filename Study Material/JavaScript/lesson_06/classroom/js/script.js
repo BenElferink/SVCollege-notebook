@@ -1,0 +1,121 @@
+// כתבו תכנית בעלת מערך של מספרים
+// התוכנית תדפיס את המספר הכי גדול במערך
+let arrQ1 = [1,2,3,4,5,6,7,8,9,0];
+function highNum(arr){
+    let highNum = arr[0];
+    for(let i=1; i < arr.length; i++){
+        if(arr[i] > highNum){
+            highNum = arr[i];
+        }
+    }
+    console.log(highNum);
+}
+highNum(arrQ1);
+
+// כתבו פונקצייה
+// שמקבלת מערך ומדפיסה כמה מספרים זוגיים יש בו
+let arrQ2 = [1,2,3,4,5,6,7,8,9,0];
+function howManyEven(arr){
+    let counter=0;
+    for(let i=0; i < arr.length; i++){
+        if(arr[i]%2 == 0){
+            counter++;
+        }
+    }
+    console.log(counter);
+}
+howManyEven(arrQ2)
+
+// כתבו פוקנצייה המקבלת מערך ושם
+// הפונקצייה תחזיר כמה פעמים השם מופיע במערך
+let arrQ3 = ['ben', 'yossi', 'orgad', 'ben'];
+let name = 'ben';
+function howManyNames(name, nameArr){
+    let counter=0;
+    for(let i=0; i < nameArr.length; i++){
+        if(nameArr[i] == name){
+            counter++;
+        }
+    }
+    return counter;
+}
+let Q3 = howManyNames(name, arrQ3);
+console.log(Q3);
+
+// כתבו פוקנצייה שמקבלת מערך של מספרים ומספר נוסף
+// הפונקצייה תוציא את כל המספרים הזהים למספר
+// ותספור כמה פעמים זה קרה
+function Q4(num, arr){
+    let temp;
+    let counter=0;
+    for(let i=0; i < arr.length; i++){
+        if(num == arr[i]){
+            arr[i] = arr[arr.length-1];
+            arr.pop();
+            counter++;
+            i--;
+        }
+    }
+    console.log(arr);
+    console.log(counter);
+}
+Q4(4, [1,2,3,4,3,2,4,5,4,6,4]);
+
+//
+// Matrix
+// column=i row=j
+let matrix = [
+    [1,2,3,4],
+    [1,2,3],
+    [1,2,3,4,5]
+];
+console.log(matrix[0][3]);
+
+for(let i=0; i < matrix.length; i++){
+    for(let j=0; j < matrix[i].length; j++){
+        console.log(matrix[i][j]);
+    }
+}
+
+// כתבו תכנית שקולטת מטריצה ומדפיסה את המספר הכי גדול
+let matQ1 = [
+    [3,4,5,6,7],
+    [7,8,9,11,33],
+    [56,78,34,2]
+];
+function matHighNum(matrix){
+    let max = matrix[0][0];
+    for(let i=0; i < matrix.length; i++){
+        for(let j=0; j < matrix[i].length; j++){
+            if(matrix[i][j] > max){
+                max = matrix[i][j];
+            }
+        }
+    }
+    console.log(max);
+}
+matHighNum(matQ1);
+
+// כתוב תכנית שיבדוק איזה אלכסון (סכומו) גדול יותר
+let matQ2 = [
+    [1,2,3,4],
+    [1,2,3,4],
+    [1,2,3,4],
+    [1,2,3,4]
+];
+function dashed(matrix){
+    let primaryDash = 0;
+    let secondaryDash = 0;
+    for(let i=0,j=matrix.length-1; i < matrix.length; i++,j--){
+        primaryDash += matrix[i][i];
+        secondaryDash += matrix[i][j];
+    }
+    if(primaryDash > secondaryDash){
+        console.log('primary is bigger');
+    } else if(secondaryDash > primaryDash){
+        console.log('secondary is bigger');
+    } else{
+        console.log('both are equal');
+    }
+}
+dashed(matQ2);

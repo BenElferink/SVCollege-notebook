@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>JS-lesson3</h1>
+        <h2>Loops</h2>
+    </header>
+    <main>
+        <div class="breakline"></div>
+        <section>
+            <div>
+                <p>Display with console.</p>
+                <button onclick="print10()">run script.js</button>
+            </div>
+            <pre>
+                function print10(){
+                    for( let i = 1; i <=10; i++){
+                        console.log(i);
+                    }
+                }
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div>
+                <p>Display with console.</p>
+                <button onclick="reversePrint10()">run script.js</button>
+            </div>
+            <pre>
+                function reversePrint10(){
+                    for(let i = 10; i >0; i--){
+                        console.log(i);
+                    }
+                }
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div>
+                <input type="number" id="factorial" placeholder="number">
+                <button onclick="factorial(document.getElementById('factorial').value)">run script.js</button>
+            </div>
+            <pre>
+                function factorial(num){
+                    let fac = 1;
+                    for(let i = 1; i <= num; i ++){
+                        fac *= i;
+                    }
+                    alert('Factorial is: ' + fac);
+                }
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div>
+                <input id="numDivider" type="number" placeholder="number">
+                <button onclick="dividerCount(document.getElementById('numDivider').value)">run script.js</button>
+            </div>
+            <pre>
+                function dividerCount(num){
+                    let numCount = 0;
+                    for(let i = 1; i <= num; i++){
+                        if(num % i == 0){
+                            numCount ++;
+                        }
+                    }
+                    alert(num + ' divides ' + numCount + ' times.');
+                }
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div>
+                <input type="number" id="num1" placeholder="number">
+                <input type="number" id="num2" placeholder="number">
+                <button onclick="identicalCounter(document.getElementById('num1').value, document.getElementById('num2').value)">run script.js</button>
+            </div>
+            <pre>
+                function identicalCounter(num1, num2){
+                    if(num1.length == 3 && num2.length == 3){
+                        let numOfIdentical = 0;
+                        let charNum = 0;
+                        for(let i = 0; i < 3; i ++){
+                            if(num1.charAt(charNum) == num2.charAt(charNum)){
+                                numOfIdentical ++;
+                            }
+                            charNum ++;
+                        }
+                        alert('Number of identical digits: ' + numOfIdentical);
+                    }
+                }
+            </pre>
+        </section>
+        <div class="breakline"></div>
+        <section>
+            <div>
+                <h4>Lion in the desert algorithm</h4>
+                <input type="number" id="lion" placeholder="number between 1-100">
+                <button onclick="lionInTheDesert(document.getElementById('lion').value)">run script.js</button>
+            </div>
+            <pre>
+                function lionInTheDesert(num){
+                    let minRange = 0;
+                    let maxRange = 100;
+                    let halfOfRange;
+                    while(true){
+                        halfOfRange = (minRange + maxRange) / 2;
+                        if(num > halfOfRange){
+                            minRange = halfOfRange;
+                        } else if(num < halfOfRange){
+                            maxRange = halfOfRange;
+                        } else if(num == halfOfRange){
+                            alert('Number guessed is: ' + halfOfRange);
+                            break;
+                        }
+                    }
+                }
+            </pre>
+        </section>
+        <div class="breakline"></div>
+    </main>
+    <footer>
+        <h3>Ben Elferink</h3>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

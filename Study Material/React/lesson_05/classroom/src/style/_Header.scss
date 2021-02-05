@@ -1,0 +1,57 @@
+.header {
+  width: 100%;
+  background-color: $dark;
+  color: $light;
+  @include flex-col;
+
+  h1 {
+    margin: 1.5rem 0;
+    .sv-logo {
+      display: none;
+    }
+  }
+
+  ul {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    h1 {
+      margin: 2rem 0 0;
+      .sv-logo {
+        display: unset;
+        height: calc(35px + 2vmin);
+        margin-left: 1rem;
+      }
+    }
+
+    ul {
+      width: 550px;
+      margin-bottom: 2rem;
+      list-style: none;
+      @include flex-row;
+
+      li {
+        margin: 0 0.5rem;
+      }
+
+      .html-txt {
+        color: $html;
+      }
+      .css-txt {
+        color: $css;
+      }
+      .js-txt {
+        color: $js;
+      }
+      .boot-txt {
+        color: $boot;
+      }
+      .react-txt {
+        color: $react;
+      }
+    }
+  }
+}

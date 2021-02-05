@@ -1,0 +1,35 @@
+select,
+input {
+  margin: 3px 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  outline: none;
+}
+
+button {
+  padding: 5px 7px;
+  background-color: $light;
+  border: 0.5px solid #000;
+  border-radius: 7px;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.room-btn {
+  margin: 5px;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.home-btn {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+}

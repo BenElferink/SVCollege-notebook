@@ -1,0 +1,35 @@
+p {
+  background-color: greenyellow;
+}
+span {
+  background-color: hotpink;
+}
+
+.a {
+  background-color: indianred;
+}
+.b {
+  background-color: khaki;
+  display: inline;
+}
+#unique {
+  background-color: lightblue;
+}
+
+/* remark */
+.go {
+  background-color: grey;
+  color: yellow;
+  text-align: center;
+  letter-spacing: 12px;
+  word-spacing: 26px;
+  line-height: 50px;
+  text-indent: 0px;
+  text-transform: capitalize;
+  font-size: 32px;
+  font-family: cursive;
+  text-decoration: line-through;
+  font-weight: bold;
+  font-style: italic;
+}
+/* remark */

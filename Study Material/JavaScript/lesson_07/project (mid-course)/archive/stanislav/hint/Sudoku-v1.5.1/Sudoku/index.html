@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Sudoku</title>
+</head>
+<body>
+    <header>
+        <h1>Sudoku</h1>
+        <p>Time elapsed: <span id="time">00:00</span></p>
+    </header>
+	<main>
+        <div class="hint">
+            <button id= "hint-btn" onclick="hint()">HINT</button>
+            <div class="hint-pictures">
+                <img id="hint-pic1" src="./img/Heart.png" alt="hint1" />
+                <img id="hint-pic2" src="./img/Heart.png" alt="hint2" />
+                <img id="hint-pic3" src="./img/Heart.png" alt="hint3" />
+            </div>
+        </div>
+        <div id="game-board">
+
+            <!-- JavaScript interacts here -->
+            <div id="chart"></div>
+
+        </div>
+    </main>
+    <footer>
+        <div id="game-settings">
+            <div id="difficulty">
+                <p>Difficulty:</p>
+                <select name="diff" id="diff" size="1">
+                    <option value="easy">easy</option>
+                    <option value="normal">normal</option>
+                    <option value="hard">hard</option>
+                </select>
+            </div>
+            <div id="chart-size">
+                <p>Size:</p>
+                <select name="size" id="size" size="1">
+                    <option value="9">9x9</option>
+                    <option value="16">16x16</option>
+                </select>
+            </div>
+        </div>
+        <div id="game-buttons">
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="resetGame()">Reset...</button>
+            <button onclick="finishGame()">I'm done!</button>
+        </div>
+    </footer>
+    <section id="modal">
+        <div id="modal-content">
+            <h2>Login</h2>
+            <p>You must login to play this Sudoku game.</p>
+            <div>
+                <label for="uname">Username:</label> <span id="uname-addto"></span> <br />
+                <input type="text" name="uname" id="uname" placeholder="username" value="admin">
+                <br />
+                <label for="pass">Password:</label> <span id="pass-addto"></span> <br />
+                <input type="password" name="pass" id="pass" placeholder="password" value="admin1234">
+                <br />
+                <button onclick="login()">login</button>
+            </div>
+            <p id="notice">Just click "login", input already cotains correct value.</p>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/rakhan.js"></script> -->
+</body>
+</html>

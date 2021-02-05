@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JS-lesson2</h1>
+      <h2>Conditions & Functions</h2>
+    </header>
+    <main>
+      <div class="breakline"></div>
+      <section>
+        <div class="contain">
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <button onclick="checkGmail()">Log</button>
+        </div>
+      </section>
+      <div class="breakline"></div>
+      <section>
+        <pre>
+                function checkGmail(){
+                    let email = document.getElementById('email').value;
+                    let index = email.indexOf('@');
+                    let emailType = email.substring(index, email.length);
+                    if(emailType == '@gmail.com'){
+                        let elementIdTitle = document.getElementById('title');
+                        elementIdTitle.style.color = 'green';
+                    } else{
+                        let elementIdTitle = document.getElementById('title');
+                        elementIdTitle.style.color = 'red';
+                    }
+                    checkFirstLetter(email);
+                }
+                
+                function checkFirstLetter(email){
+                    let firstLetter = email.charAt(0);
+                    if(firstLetter == 'd'){
+                        window.location.href = "./../thanks.html";
+                    } else{
+                        window.location.href = "./../fail.html";
+                    }
+                }
+            </pre
+        >
+      </section>
+      <div class="breakline"></div>
+    </main>
+    <footer>
+      <h3>Ben Elferink</h3>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

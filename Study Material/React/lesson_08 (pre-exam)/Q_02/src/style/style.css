@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.App h2 {
+  text-align: center;
+}
+
+.App button {
+  background-color: grey;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.App input {
+  padding: 3px 7px;
+  border-radius: 7px;
+}
+
+.App .home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .home h2 {
+  margin: 30px 0;
+}
+
+.App .home button {
+  background-color: slateblue;
+  margin: 10px 0;
+}
+
+.App .signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.App .signup h2 {
+  margin: 10px 0;
+}
+
+.App .signup table {
+  margin: 20px 0;
+}
+
+.App .signup .error {
+  color: red;
+}
+
+.App .signup .radio-group-parent {
+  display: flex;
+  align-items: center;
+}
+
+.App .signup .radio-group-parent .radio-group {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.App .signup .radio-group-parent .radio-group input,
+.App .signup .radio-group-parent .radio-group label {
+  cursor: pointer;
+}
+
+.App .signup .radio-group-parent .radio-group label {
+  margin-left: 5px;
+}
+
+.App .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .login .inp-group {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.App .welcome p {
+  margin: 20px 0;
+}
+
+.App .welcome .prod-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .welcome .prod-list .product {
+  width: 200px;
+  height: 110px;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #e2dede;
+  border: 1px solid #000;
+}
+
+.App .welcome .prod-list .product p {
+  margin: 0;
+}
+
+.App .welcome .prod-list .product button {
+  margin-top: 10px;
+  margin-left: 120px;
+}
+
+.App .manager h2 {
+  margin: 20px 0;
+}
+
+.App .manager table {
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.App .manager table th,
+.App .manager table td {
+  border: 1px solid #000;
+  padding: 5px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.31be5ade.chunk.css",
+    "main.js": "/static/js/main.422b58cc.chunk.js",
+    "main.js.map": "/static/js/main.422b58cc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e688a772.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e688a772.js.map",
+    "static/js/2.e909a90d.chunk.js": "/static/js/2.e909a90d.chunk.js",
+    "static/js/2.e909a90d.chunk.js.map": "/static/js/2.e909a90d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.31be5ade.chunk.css.map": "/static/css/main.31be5ade.chunk.css.map",
+    "static/js/2.e909a90d.chunk.js.LICENSE.txt": "/static/js/2.e909a90d.chunk.js.LICENSE.txt",
+    "static/media/canada.4fc841b7.svg": "/static/media/canada.4fc841b7.svg",
+    "static/media/cyprus.b54ae00c.svg": "/static/media/cyprus.b54ae00c.svg",
+    "static/media/israel.1789db43.svg": "/static/media/israel.1789db43.svg",
+    "static/media/netherlands.4593cd14.svg": "/static/media/netherlands.4593cd14.svg",
+    "static/media/south-africa.51c47c10.svg": "/static/media/south-africa.51c47c10.svg",
+    "static/media/sweden.c6defec0.svg": "/static/media/sweden.c6defec0.svg",
+    "static/media/united-arab-emirates.90df7e6d.svg": "/static/media/united-arab-emirates.90df7e6d.svg",
+    "static/media/united-states.ee877e6a.svg": "/static/media/united-states.ee877e6a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e688a772.js",
+    "static/js/2.e909a90d.chunk.js",
+    "static/css/main.31be5ade.chunk.css",
+    "static/js/main.422b58cc.chunk.js"
+  ]
+}

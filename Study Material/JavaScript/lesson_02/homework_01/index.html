@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>homework: js-lesson2</h1>
+    </header>
+    <main>
+        <!-- <section>
+            <div class="question" dir="rtl">
+                insert question here
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="" id="" placeholder="">
+                    <button onclick="">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        place code here
+                    </pre>
+                </div>
+            </div>
+        </section> -->
+        <section>
+            <div class="question" dir="rtl">
+                1. כתבו פונקציה המקבלת 2 מספרים ומדפיסה את הקטן מבניהם.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="number" id="q1a" placeholder="place number">
+                    <input type="number" id="q1b" placeholder="place number">
+                    <button onclick="lowestNumber(document.getElementById('q1a').value, document.getElementById('q1b').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function lowestNumber(a, b){
+                            if(a < b && a != b){
+                                alert('Lowest number is: ' + a);
+                            } else if(b < a && b != a){
+                                alert('Lowest number is: ' + b);
+                            } else{
+                                alert('!Both numbers are equal!');
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                2. כתבו פונקציה המקבלת 4 מחרוזות ובודקת כמה מהם גדולות מ- 3 תווים.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q2a" placeholder="type here">
+                    <input type="text" id="q2b" placeholder="type here">
+                    <input type="text" id="q2c" placeholder="type here">
+                    <input type="text" id="q2d" placeholder="type here">
+                    <button onclick="variableCharacterCount(document.getElementById('q2a').value, document.getElementById('q2b').value, document.getElementById('q2c').value, document.getElementById('q2d').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function variableCharacterCount(a, b, c, d){
+                            let aCount = a.length;
+                            let bCount = b.length;
+                            let cCount = c.length;
+                            let dCount = d.length;
+                            let aboveThree = 0;
+                            if(aCount > 3){
+                                aboveThree ++ ;
+                            }
+                            if(bCount > 3){
+                                aboveThree ++ ;
+                            }
+                            if(cCount > 3){
+                                aboveThree ++ ;
+                            }
+                            if(dCount > 3){
+                                aboveThree ++ ;
+                            }
+                            alert('Variables over 3 characters: ' + aboveThree);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                3. כתבו פונקציה שלוקחת ערך מinput, הפונקציה בודקת האם קיימת בו האות A, במידה וכן, מדפיסה את ה input עם a קטנה.<br /><br />
+                ניתן להשתמש בטבלת ascii לפתרון התרגיל או להשתמש בפעולות מוכנות מהאינטרנט להפיכת ה -אות לקטנה.<br /><br />
+                ניתן לקחת בחשבון ש - באותה מחרוזת התו A יופיע פעם אחת ולא יותר מכך ולא תצטרכו לשנות כמה אותיות באותה מחרוזת.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q3str" placeholder="type here">
+                    <button onclick="removeCapsOnA(document.getElementById('q3str').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function removeCapsOnA(str){
+                            let strIndex = str.indexOf('A');
+                            if(strIndex == -1){
+                                alert('Nothing changed: ' + str);
+                            } else{
+                                str = str.replace('A', 'a');
+                                alert('After change: ' + str);
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                4. כתבו פונקציה המקבלת מספר ומדפיסה האם הוא חיובי/שלילי ו זוגי/אי -זוגי.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="number" id="q4num" placeholder="place number">
+                    <button onclick="analyzeNumber(document.getElementById('q4num').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function analyzeNumber(number){
+                            let moduluNum = number % 2;
+                            if(number > 0 && number != 0){
+                                if(moduluNum != 0){
+                                    alert(number + ' is positive & odd');
+                                } else{
+                                    alert(number + ' is positive & even');
+                                }
+                            } else if(number < 0 && number != 0){
+                                if(moduluNum != 0){
+                                    alert(number + ' is negative & odd');
+                                } else{
+                                    alert(number + ' is negative & even');
+                                }
+                            } else{
+                                alert('cannot define ' + number);
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                5 כתבו פונקציה המקבלת מחרוזת. הפונקציה תבדוק אם האות הראשונה והאחרונה זהות, במידה וכן תמחק אותם ותדפיס את המחרוזת החדשה.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q5str" placeholder="type here">
+                    <button onclick="compareStartAndEnd(document.getElementById('q5str').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function compareStartAndEnd(str){
+                            let firstLetter = str.charAt(0);
+                            let lastLetterIndex = str.length;
+                            lastLetterIndex -= 1;
+                            let lastLetter = str.charAt(lastLetterIndex);
+                            if(firstLetter == lastLetter){
+                                let strChange = str.substring(1, lastLetterIndex);
+                                alert('before: ' + str + ', after: ' + strChange);
+                            } else{
+                                alert('they dont compare');
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                6. כתבו פונקציה המקבלת מחרוזת. אם יש בה * היא תדפיס את המחרוזת בלי הכוכבית. אם יש בה @ היא תשים כוכביות לפני ואחרי (בהתחלה ובסוף) המחרוזת. אם יש בה ₪ היא תדפיס ״new shekel״
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q6str" placeholder="type here">
+                    <button onclick="variableAnalyze(document.getElementById('q6str').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function variableAnalyze(str){
+                            if(str.indexOf('*') != -1){
+                                let strIndex = str.indexOf('*');
+                                str = str.slice(0, strIndex) + str.slice(strIndex + 1);
+                                alert('result: ' + str);
+                            } else if(str.indexOf('@') != -1){
+                                str = '*' + str + '*';
+                                alert('result: ' + str);
+                            } else if(str.indexOf('₪') != -1){
+                                alert('new shekel');
+                            }else{
+                                alert('are you f*cking around?')
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question">
+                Currency Calculator
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="number" id="shekel" placeholder="₪ Shekel">
+                    <select id="currency">
+                        <option value="dollar">$ Dollar</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="pound">£ Pound</option>
+                    </select>
+                    <button onclick="currencyCalc(document.getElementById('shekel').value, document.getElementById('currency').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function currencyCalc(number, currency){
+                            if(currency == 'dollar'){
+                                currency = 0.29;
+                                alert('₪' + number + ' = ' + '$' + number*currency);
+                            } else if(currency == "euro"){
+                                currency = 0.26;
+                                alert('₪' + number + ' = ' + '€' + number*currency);
+                            } else if(currency == 'pound'){
+                                currency = 0.23;
+                                alert('₪' + number + ' = ' + '£' + number*currency);
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

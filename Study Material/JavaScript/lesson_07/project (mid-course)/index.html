@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Sudoku</title>
+</head>
+<body>
+    <header>
+        <h1>Sudoku</h1>
+        <p>Time elapsed: <span id="time">00:00</span></p>
+        <div class="hint">
+            <button id="hint-btn" onclick="hint()">HINT</button>
+            <div class="hint-pictures">
+                <img id="hint-pic1" src="./img/Heart.png" alt="hint1" />
+                <img id="hint-pic2" src="./img/Heart.png" alt="hint2" />
+                <img id="hint-pic3" src="./img/Heart.png" alt="hint3" />
+            </div>
+        </div>
+    </header>
+	<main>
+        <div id="game-board">
+            <!-- JavaScript interacts here -->
+            <div id="chart"></div>
+            <!-- end of JavaScript -->
+        </div>
+    </main>
+    <footer>
+        <div id="game-settings">
+            <div id="difficulty">
+                <p>Difficulty:</p>
+                <select name="diff" id="diff" size="1">
+                    <option value="easy">easy</option>
+                    <option value="normal">normal</option>
+                    <option value="hard">hard</option>
+                </select>
+            </div>
+            <div id="chart-size">
+                <p>Size:</p>
+                <select name="size" id="size" size="1">
+                    <option value="9">9x9</option>
+                    <option value="16">16x16</option>
+                    <!-- <option value="25">25x25</option> -->
+                </select>
+            </div>
+        </div>
+        <div id="game-buttons">
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="resetGame()">Reset...</button>
+            <button onclick="finishGame()">I'm done!</button>
+        </div>
+    </footer>
+    <section id="modal-login">
+        <div id="modal-content-login">
+            <h2>Welcome</h2>
+            <p>Create a username to start playing.</p>
+            <div>
+                <label for="uname">Username:</label> <span id="uname-addto"></span> <br />
+                <input type="text" name="uname" id="uname" placeholder="username">
+                <br />
+                <label for="pass">Password:</label> <span id="pass-addto"></span> <br />
+                <input type="password" name="pass" id="pass" placeholder="password" value="••••••••" readonly>
+                <br />
+                <button onclick="login()">login</button>
+            </div>
+            <p id="notice">&lt; / developed &gt; by Ben Elferink</p>
+        </div>
+    </section>
+    <section id="modal-scoreboard">
+        <div id="modal-content-score">
+            <h2>Good job <span id="score-name-title"></span>!</h2>
+            <h3>Finished in <span id="score-minutes-title"></span>m <span id="score-seconds-title"></span>s</h3>
+            <div id="scr-board">
+                Leaderboard:
+                <div class="scr-settings">
+                    <select name="scr-diff" id="scr-diff">
+                        <option value="easy">easy</option>
+                        <option value="normal">normal</option>
+                        <option value="hard">hard</option>
+                    </select>
+                    <select name="scr-size" id="scr-size">
+                        <option value="9">9x9</option>
+                        <option value="16">16x16</option>
+                    </select>
+                    <button onclick="updateScrScreen(document.getElementById('scr-diff').value, document.getElementById('scr-size').value)">show</button>
+                </div>
+                <ol>
+                    <li id="scr1"></li>
+                    <li id="scr2"></li>
+                    <li id="scr3"></li>
+                    <li id="scr4"></li>
+                    <li id="scr5"></li>
+                </ol>
+            </div>
+            <div class="score-buttons">
+                <button onclick="newGame()">New Game</button>
+                <button onclick="clearScores()">Clear Scores</button>
+            </div>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>

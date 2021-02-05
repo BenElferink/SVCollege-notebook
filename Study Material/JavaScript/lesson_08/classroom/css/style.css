@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+body{
+    background-color: #e7e7e7;
+}
+.breakline{
+    border: 1px solid black;
+    background-color: black;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+#animate{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px black;
+    background-color: blue;
+    animation: test 3s infinite;
+    position: relative;
+}
+/* @keyframes test{
+    from{background-color: blue;}
+    to{background-color: red;}
+} */
+@keyframes test{
+    0% {background-color: red; left: 0px; top: 0px;}
+    25% {background-color: blue; left: 200px; top: 0px;}
+    50% {background-color: yellowgreen; left: 200px; top: 200px;}
+    75% {background-color: purple; left: 0px; top: 200px;}
+    100% {background-color: gold; left: 0px; top: 0px;}
+}

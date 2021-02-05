@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>
+            homework: js-lesson3
+        </h1>
+    </header>
+    <main>
+        <!-- <section>
+            <div class="question" dir="rtl">
+                insert question here
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="" id="" placeholder="">
+                    <button onclick="">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        place code here
+                    </pre>
+                </div>
+            </div>
+        </section> -->
+        <section>
+            <div class="question" dir="rtl">
+                1. כתבו פונקציה המחזירה אמת או שקר. הפונקציה מקבלת ערך מאינפוט ובודקת אם הוא יכול להיות ת.ז תקינה.<br />
+                **תקינה = בעלת 9 ספרות כאשר כל תו הוא ספרה!
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="number" id="id-verify" placeholder="number">
+                    <button onclick="idVerify(document.getElementById('id-verify').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function idVerify(num){
+                            let result;
+                            let counter = 0;
+                            if(num.length == 9){
+                                for(let i = 0; i < 9; i++){
+                                    if(num.charAt(i) >= 0 || num.charAt(i) <= 9){
+                                        counter ++;
+                                        if(counter == 9){
+                                            result = true;
+                                        }
+                                    }
+                                }
+                            } else{
+                                result = false;
+                            }
+                            alert('#ID: ' + result);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                2. כתבו פונקציה המקבלת מספר ומדפיסה ה - אם המספר הינו ראשוני (מספר שמתחלק רק ב 1 ובעצמו).
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="number" id="prime-number" placeholder="number">
+                    <button onclick="primeNumber(document.getElementById('prime-number').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function primeNumber(num){
+                            let counter = 0;
+                            for(let i = 1; i <= num; i++){
+                                if(num % i == 0){
+                                    counter ++;
+                                }
+                            }
+                            if(counter == 2){
+                                alert(num + ' is a "prime" number.')
+                            } else{
+                                alert(num + ' is a "composite" number.')
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                3. כתבו פונקציה ש - קולטת מחרוזת ושמה לפני כל אות גדולה רווח ומחזירה את התוצאה.<br/>
+                לדוגמא: קיבלה abCdEf   החזירה ab Cd Ef
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="space-before-caps" placeholder="text">
+                    <button onclick="spaceBeforeCaps(document.getElementById('space-before-caps').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function spaceBeforeCaps(str){
+                            let subStr1, subStr2;
+                            let newStr = str;
+                            let count = 0;
+                            for(let i = 0; i < newStr.length; i++){
+                                if(str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90){
+                                    subStr1 = newStr.slice(0, i + count);
+                                    subStr2 = newStr.slice(i + count);
+                                    newStr = subStr1 + ' ' + subStr2;
+                                    count ++;
+                                }
+                            }
+                            alert('Fixed string: ' + newStr);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                4. כתבו תוכנית שקולטת מהמשתמש ערכים מספריים (לתוך input שיוצג באתר) ולא מפסיקה לבקש עד אשר הוכנס מספר שלילי. ברגע שהוכנס לאינפוט ערך שלילי התוכנית תדפיס מהו המספר הגדול ביותר שהוקש עד כה.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="number" id="negative-number" placeholder="number">
+                    <button onclick="negativeNumber(document.getElementById('negative-number').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        let highNumMemo = 0;
+                        function negativeNumber(num){
+                            if(num >= 0){
+                                if(num > highNumMemo){
+                                    highNumMemo = num;
+                                }
+                                alert(`try agin;  ${num} is not a negative number;`);
+                            } else if(num < 0){
+                                alert(`awesome; ${highNumMemo} is the highest number typed;`);
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                5. כתבו פונקציה המקבלת 2 מחרוזות וסופרת כמה פעמים המחרוזת הקטנה מופיעה בתוך המחרוזת הארוכה. הפונקציה תחזיר את התוצאה.
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="q5str1" placeholder="text">
+                    <input type="text" id="q5str2" placeholder="text">
+                    <button onclick="playingWithStrings(document.getElementById('q5str1').value, document.getElementById('q5str2').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function playingWithStrings(str1, str2){
+                            let counter = 0;
+                            let dynamicString;
+                            if(str1.length < str2.length){
+                                dynamicString = str2;
+                                for(let i = 0; i < dynamicString.length; i ++){
+                                    if(dynamicString.indexOf(str1) == i){
+                                        counter ++;
+                                        dynamicString = dynamicString.slice(i + 1);
+                                        i = 0;
+                                    }
+                                }
+                                alert(`${str1} appears ${counter} times in ${str2}`);
+                            } else if(str1.length > str2.length){
+                                dynamicString = str1;
+                                for(let i = 0; i < dynamicString.length; i++){
+                                    if(dynamicString.indexOf(str2) == i){
+                                        counter ++;
+                                        dynamicString = dynamicString.slice(i + 1);
+                                        i = 0;
+                                    }
+                                }
+                                alert(`${str2} appears ${counter} times in ${str1}`);
+                            }
+                            console.log(`note to self: bug found-
+                            if short string contains 1 input (say: A),
+                            and long string is on repeat (say: AAAAA)
+                            code will recognize it's existence only once!`)
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                6. **שאלת אתגר** כתבו פונקציה אשר מקבלת מחרוזת, הפונקציה תמיין את המחרוזת מהקטן לגדול.<br />
+                לדוגמא: קיבלה "fcab" תחזיר "abcf"<br />
+                **אסור להשתמש בפונקציות בנויות (מיונים למיניהם).<br />
+                **רמז: ניתן לקרוא באינטרנט על ״bubble sort״.<br />
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <input type="text" id="bubble-sort" placeholder="text">
+                    <button onclick="bubbleSort(document.getElementById('bubble-sort').value)">
+                        run script.js
+                    </button>
+                </div>
+                <div class="code">
+                    <pre>
+                        function bubbleSort(str){
+                            for(let i = 0; i < str.length; i ++){
+                                for(let j = 0; j < str.length; j ++){
+                                    if(str.charCodeAt(j) > str.charCodeAt(j + 1)){
+                                        let tempMemo1 = str.charAt(j);
+                                        let tempMemo2 = str.charAt(j + 1);
+                                        let tempStr1 = str.slice(0, j);
+                                        let tempStr2 = str.slice(j + 2);
+                                        str = tempStr1 + tempMemo2 + tempMemo1 + tempStr2;
+                                    }
+                                }
+                            }
+                            alert(`reorganized: ${str}`);
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="question" dir="rtl">
+                7. אפיון מחשבון: יש לבנות אתר המציג מחשבון פשוט.<br />
+                החישבום יבוצעו באופן הבא: (X+Y=), (X-Y=), (X*Y=), (X/Y=).<br />
+                הערות נוספות:<br />
+                ** החישובים יוצגו במחשבון בהתאם ללחיצות על הכפתורים הרלוונטיים.<br />
+                ** אין צורך לשרשר כמה חישובים יחדיו (שניים בלבד כמו בדוגמאות).<br />
+                ** C – הכפתור יאפס את מסך התצוגה של המחשבון.<br />
+                ** יש לוודא ש - במידה ותתבצע חלוקה ב- 0 יוצג על המסך "undefine".<br />
+            </div>
+            <div class="flex">
+                <div class="interact">
+                    <table>
+                        <thead>
+                            <th colspan="4"><input id="calcDisplay"></input></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><button onclick="calcKeypad(1)">1</button></td>
+                                <td><button onclick="calcKeypad(2)">2</button></td>
+                                <td><button onclick="calcKeypad(3)">3</button></td>
+                                <td><button onclick="calcFunction('+')">+</button></td>
+                            </tr>
+                            <tr>
+                                <td><button onclick="calcKeypad(4)">4</button></td>
+                                <td><button onclick="calcKeypad(5)">5</button></td>
+                                <td><button onclick="calcKeypad(6)">6</button></td>
+                                <td><button onclick="calcFunction('-')">-</button></td>
+                            </tr>
+                            <tr>
+                                <td><button onclick="calcKeypad(7)">7</button></td>
+                                <td><button onclick="calcKeypad(8)">8</button></td>
+                                <td><button onclick="calcKeypad(9)">9</button></td>
+                                <td><button onclick="calcFunction('*')">*</button></td>
+                            </tr>
+                            <tr>
+                                <td><button onclick="calcClear()">AC</button></td>
+                                <td><button onclick="calcKeypad(0)">0</button></td>
+                                <td><button onclick="calcResult()">=</button></td>
+                                <td><button onclick="calcFunction('/')">/</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+                    <pre>
+                        let displayedNum, x, y, mathFunc;
+                        function calcKeypad(num){
+                            displayedNum = document.getElementById('calcDisplay').value;
+                            document.getElementById('calcDisplay').value = displayedNum + num;
+                            if(mathFunc == null){
+                                x = parseFloat(displayedNum + num);
+                                displayedNum = x;
+                            } else{
+                                let mathIndex = displayedNum.indexOf(mathFunc);
+                                y = parseFloat(displayedNum.slice(mathIndex + 1) + num);
+                                displayedNum = y;
+                            }
+                        }
+                        function calcClear(){
+                            document.getElementById('calcDisplay').value = null;
+                            displayedNum = null;
+                            mathFunc = null;
+                            x = null;
+                            y = null;
+                        }
+                        function calcFunction(func){
+                            mathFunc = func;
+                            displayedNum = parseFloat(document.getElementById('calcDisplay').value);
+                            document.getElementById('calcDisplay').value = displayedNum + func;
+                        }
+                        function calcResult(){
+                            document.getElementById('calcDisplay').value = null;
+                            if(mathFunc == '+'){
+                                document.getElementById('calcDisplay').value = x + y;
+                            } else if(mathFunc == '-'){
+                                document.getElementById('calcDisplay').value = x - y;
+                            } else if(mathFunc == '*'){
+                                document.getElementById('calcDisplay').value = x * y;
+                            } else if(mathFunc == '/'){
+                                if(y != 0){
+                                    document.getElementById('calcDisplay').value = x / y;
+                                } else if(y == 0){
+                                    document.getElementById('calcDisplay').value = undefined;
+                                }
+                            }
+                            displayedNum = parseFloat(document.getElementById('calcDisplay').value);
+                            x = displayedNum;
+                            y = 0;
+                            mathFunc = null;
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

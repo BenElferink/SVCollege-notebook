@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  /* user-select: none; */
+}
+/* HTML{
+    user-select: none;
+} */
+body {
+  background: url(./../img/sudoWall.jpg) no-repeat center;
+  background-size: cover;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  height: 20vh;
+}
+main {
+  display: grid;
+  place-items: center;
+  height: 65vh;
+}
+footer {
+  display: grid;
+  place-items: center;
+  height: 15vh;
+}
+
+header h1 {
+  font-size: 70px;
+  margin-top: 5px;
+  color: rgb(255, 150, 100);
+  text-shadow: 0 0 10px black;
+}
+header p {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(255, 150, 100);
+  text-shadow: 0 0 10px black;
+}
+.hint {
+  display: flex;
+  margin-top: 15px;
+}
+#hint-pic1,
+#hint-pic2,
+#hint-pic3 {
+  height: 50px;
+  width: 50px;
+  /* APPLY SHADOW TO ALPHA BORDER- OBJECT ON TRANSPARENT BACKGROUND */
+  filter: drop-shadow(0 0 15px white);
+}
+#diff:hover,
+#size:hover {
+  opacity: 75%;
+}
+
+#game-settings {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+  color: rgb(255, 150, 100);
+}
+#game-settings > * {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+#game-settings p {
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 0 0 10px black;
+}
+#game-settings select {
+  border: 1px solid rgb(255, 150, 100);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: fit-content;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 100;
+  cursor: pointer;
+  color: rgb(255, 150, 100);
+}
+#game-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+#game-buttons button,
+#hint-btn {
+  height: 50px;
+  width: fit-content;
+  margin: 0 15px;
+  padding: 0 7px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 3px solid rgb(255, 150, 100);
+  background-color: rgba(255, 150, 100, 0.3);
+  color: rgb(255, 150, 100);
+  text-shadow: 0 0 10px black;
+  box-shadow: 0 0 25px black;
+}
+#game-buttons button:hover,
+#hint-btn:hover {
+  background-color: rgba(255, 150, 100, 0.5);
+  cursor: pointer;
+}
+#game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-login {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* opacity: 0;
+    visibility: hidden; */
+  transition: all 1s;
+}
+#modal-content-login {
+  background: linear-gradient(to top right, rgb(220, 50, 140), rgb(50, 10, 90));
+  color: rgb(255, 150, 100);
+  text-shadow: -1px 1px rgb(0, 0, 0);
+  border-radius: 50px;
+  height: 70%;
+  width: 80%;
+  position: relative;
+  top: 15%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 50px rgb(220, 50, 140);
+}
+#modal-content-login h2 {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 80px;
+}
+#modal-content-login p {
+  text-align: center;
+}
+#modal-content-login div {
+  margin: 10vh auto;
+}
+#modal-content-login div input {
+  margin-bottom: 1.5vh;
+  width: 170px;
+}
+#modal-content-login div button {
+  width: 70px;
+  height: 25px;
+  border-radius: 7px;
+  background-color: white;
+  border: 0.5px solid black;
+}
+#modal-content-login div button:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+#notice {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  font-size: small;
+}
+
+#modal-scoreboard {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+#modal-content-score {
+  background: linear-gradient(
+    to bottom right,
+    rgb(220, 50, 140),
+    rgb(50, 10, 90)
+  );
+  color: rgb(255, 150, 100);
+  text-shadow: -1px 1px rgb(0, 0, 0);
+  border-radius: 50px;
+  height: 80%;
+  width: 50%;
+  position: relative;
+  top: 10%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 50px rgb(220, 50, 140);
+}
+#modal-content-score h2 {
+  margin-top: 7%;
+  font-size: 40px;
+}
+#modal-content-score h3 {
+  font-size: 25px;
+}
+#scr-board {
+  margin-top: 10%;
+  text-shadow: none;
+  font-size: 20px;
+}
+.scr-settings {
+  display: flex;
+  justify-content: space-evenly;
+}
+.scr-settings select {
+  background: none;
+  border: none;
+  color: rgb(255, 150, 100);
+  font-size: large;
+}
+.scr-settings button {
+  height: 25px;
+  width: 50px;
+  margin: 0 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 150, 100);
+  background-color: rgba(255, 150, 100, 0.3);
+  color: rgb(255, 150, 100);
+  text-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+}
+.scr-settings button:hover {
+  background-color: rgba(255, 150, 100, 0.5);
+  cursor: pointer;
+}
+#scr-board li {
+  margin-top: 15%;
+}
+.score-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+}
+.score-buttons button {
+  height: 50px;
+  width: 150px;
+  margin: 0 15px;
+  padding: 0 7px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 3px solid rgb(255, 150, 100);
+  background-color: rgba(255, 150, 100, 0.3);
+  color: rgb(255, 150, 100);
+  text-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+}
+.score-buttons button:hover {
+  background-color: rgba(255, 150, 100, 0.5);
+  cursor: pointer;
+}

@@ -1,0 +1,158 @@
+* {
+  color: #959595;
+}
+body {
+  background-color: #1e1e1e;
+}
+
+/* GLOBAL */
+#signature {
+  font-size: 1em;
+  font-weight: 100;
+  text-shadow: 0 0 3px black;
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+.html {
+  color: rgb(230, 80, 40);
+}
+.css {
+  color: rgb(20, 115, 180);
+}
+.js {
+  color: rgb(245, 225, 25);
+}
+.boot {
+  color: rgb(115, 85, 170);
+}
+.react {
+  color: rgb(130, 215, 250);
+}
+
+/* HEADER */
+header {
+  background-color: #2d2d2d;
+  padding: 5vmin 0;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+}
+#logo h1 {
+  display: inline;
+  font-size: 7vmin;
+  margin: 0;
+}
+#logo span {
+  text-decoration: overline;
+}
+#logo img {
+  height: 7vmin;
+  margin-left: 1vmin;
+}
+#sub-logo {
+  display: flex;
+  justify-content: center;
+}
+#sub-logo a {
+  margin: 0 1.2vmin;
+  font-size: 3vmin;
+  color: #959595;
+  cursor: pointer;
+}
+
+/* MAIN */
+.container {
+  margin-top: 7vmin;
+}
+.class-title {
+  text-align: center;
+  font-size: 5vmin;
+  margin: 0;
+}
+.spacing {
+  margin: 5vmin 0;
+}
+.card {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+.card h2 {
+  font-size: 4vmin;
+}
+.card p {
+  font-size: 2vmin;
+}
+
+/* modal button */
+.show-modal {
+  border: 1px solid black;
+  color: black;
+  font-size: 3vmin;
+  border-radius: 0.5em;
+  width: fit-content;
+  padding: 0.3em;
+  margin: 0.5em auto;
+  transition: all 0.1s;
+}
+.show-modal:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.html-css-btn {
+  background: linear-gradient(
+    to right,
+    rgb(230, 80, 40),
+    rgba(20, 115, 180, 0.7)
+  );
+}
+.js-btn {
+  background-color: rgb(245, 225, 25);
+}
+.react-btn {
+  background-color: rgb(130, 215, 250);
+}
+.boot-btn {
+  background-color: rgb(115, 85, 170);
+}
+/* modal itself */
+#modal {
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#modal-content {
+  padding: 1.5vmin;
+  height: 85%;
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #959595;
+  border-radius: 10px;
+}
+#modal-nav {
+  height: 5%;
+  text-align: center;
+}
+#file-links {
+  display: flex;
+  justify-content: flex-start;
+}
+#file-links a {
+  color: black;
+  margin-left: 1vmin;
+}
+#iframe {
+  background-color: white;
+}

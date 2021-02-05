@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+body{
+    /* background: url(./../img/sudoWall.jpg) no-repeat center; */
+    background: #161b25;
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+
+
+header{
+    display: grid;
+    place-items: center;
+    height: 15vh;
+}
+main{
+    display: grid;
+    place-items: center;
+    height: 70vh;
+}
+footer{
+    display: grid;
+    place-items: center;
+    height: 15vh;
+}
+
+
+
+header h1{
+    font-size: 70px;
+    margin-top: 30px;
+    /* color: rgb(255, 150, 100); */
+    color: #fea500;
+    text-shadow: 0 0 10px black;
+}
+header p{
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+    /* color: rgb(255, 150, 100); */
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+p{
+    color: #fea500;
+}
+
+.hint{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#hint-pic1, #hint-pic2, #hint-pic3{
+    height: 50px;
+    width: 50px;
+
+}
+
+.hint-pic1:hover, .hint-pic2:hover, .hint-pic3:hover{
+    opacity: 75%;
+}
+
+#game-settings{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fea500;
+    /* color: rgb(255, 150, 100);     */
+}
+#game-settings > *{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+#game-settings p{
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 10px black;
+}
+#game-settings select{
+    /* border: 1px solid rgb(255, 150, 100); */
+    border: 1px solid #fea500;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: fit-content;
+    padding: 0 10px;
+    font-size: 24px;
+    font-weight: 100;
+    cursor: pointer;
+    color: rgb(255, 150, 100);
+}
+#game-buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#game-buttons button, #hint-btn{
+    height: 50px;
+    width: fit-content;
+    margin: 0 15px;
+    padding: 0 7px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 15px;
+    /* border: 3px solid rgb(255, 150, 100); */
+    border: 3px solid #fea500;
+    background-color: rgba(255, 150, 100, 0.3);
+    /* color: rgb(255, 150, 100); */
+    color: white;
+    text-shadow: 0 0 10px black;
+    box-shadow: 0 0 50px black;
+}
+
+#game-buttons button:hover, #hint-btn:hover{
+    background-color: rgba(255, 150, 100, 0.5);
+    cursor: pointer;
+}
+#game-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* opacity: 0;
+    visibility: hidden; */
+    transition: all 1s;
+}
+#modal-content{
+    background: linear-gradient(
+        to top right,
+        rgb(220, 50, 140),
+        rgb(50, 10, 90)
+    );
+    /* color: rgb(255, 150, 100); */
+    color: #fea500;
+    text-shadow: -1px 1px rgb(0, 0, 0);
+    border-radius: 50px;
+    height: 70%;
+    width: 80%;
+    position: relative;
+    top: 15%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+#modal-content h2{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 80px;
+}
+#modal-content p{
+    text-align: center;
+}
+#modal-content div{
+    margin: 10vh auto;
+}
+#modal-content div input{
+    margin-bottom: 1.5vh;
+    width: 170px;
+}
+#modal-content div button{
+    width: 70px;
+    height: 25px;
+    border-radius: 7px;
+    background-color: white;
+    border: 0.5px solid black;
+}
+#modal-content div button:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+#notice{
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    font-size: small;
+}
+
+
+#diff:hover, #size:hover{
+    opacity: 75%;
+}

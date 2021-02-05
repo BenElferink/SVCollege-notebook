@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #959595;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header h1 {
+  margin: 1.5rem 0;
+}
+
+.header h1 .sv-logo {
+  display: none;
+}
+
+.header ul {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header h1 {
+    margin: 2rem 0 0;
+  }
+  .header h1 .sv-logo {
+    display: unset;
+    height: calc(35px + 2vmin);
+    margin-left: 1rem;
+  }
+  .header ul {
+    width: 550px;
+    margin-bottom: 2rem;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .header ul li {
+    margin: 0 0.5rem;
+  }
+  .header ul .html-txt {
+    color: #f06529;
+  }
+  .header ul .css-txt {
+    color: #1473b4;
+  }
+  .header ul .js-txt {
+    color: #f0db4f;
+  }
+  .header ul .boot-txt {
+    color: #7355aa;
+  }
+  .header ul .react-txt {
+    color: #88dded;
+  }
+}
+
+nav {
+  margin: 1rem 0;
+}
+
+nav button {
+  font-size: calc(10px + 2vmin);
+}
+
+.page {
+  font-size: calc(8px + 2vmin);
+}
+/*# sourceMappingURL=style.css.map */
